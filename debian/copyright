@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: monero
+Upstream-Name: Monero
 Source: https://github.com/monero/monero-core
 
 Files: *
