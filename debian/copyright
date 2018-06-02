@@ -12,7 +12,7 @@ License: BSD-3-Clause
 
 Files: external/boost/*
 Copyright: 2017 Robert Ramey
-License: Boost-Software-License
+License: BSL-1.0
 
 Files: debian/*
 Copyright: 2016 Subgraph
@@ -22,11 +22,11 @@ Comment:
 
 Files: external/liblmdb/*
 Copyright: 2017 Howard Chu, Symas Corp
-License: OpenLDAP-License
+License: OLDAP-2.8
 
 Files: external/easylogging++/*
 Copyright: 2017 muflihun.com
-License: MIT
+License: Expat
 
 Files: external/miniupnpc/*
 Copyright: 2017 Thomas BERNARD
@@ -34,13 +34,13 @@ License: BSD-3-Clause
 
 Files: external/rapidjson/*
 Copyright: 2017 THL A29 Limited
-License: MIT
+License: Expat
 
 Files: external/unbound/*
 Copyright: 2017 NLnet Labs
 License: BSD-3-Clause
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in
  the Software without restriction, including without limitation the rights to
@@ -58,7 +58,7 @@ License: MIT
  IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-License: OpenLDAP-License
+License: OLDAP-2.8
  The OpenLDAP Public License
  Version 2.8, 17 August 2003
  .
@@ -105,7 +105,7 @@ License: OpenLDAP-License
  California, USA.  All Rights Reserved.  Permission to copy and
  distribute verbatim copies of this document is granted.
 
-License: Boost-Software-License
+License: BSL-1.0
  Boost Software License - Version 1.0 - August 17th, 2003
  .
  Permission is hereby granted, free of charge, to any person or organization
