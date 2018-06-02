@@ -5,6 +5,14 @@ Source: https://github.com/monero/monero-core
 Files: *
 Copyright: 2017 Monero
 License: BSD-3-Clause
+Comment:
+ File <src/crypto/crypto_ops_builder/README.md> describes some code
+ as being copyright Daniel Bernstein and others.
+ Contents of <http://hyperelliptic.org/ebats/supercop-20141124.tar.bz2>,
+ referenced in <src/crypto/crypto_ops_builder/ref10/description>,
+ indicate however that those original authors dedicated their work
+ to the public domain,
+ and therefore Monero is the only copyright holder of that code.
 
 Files: contrib/epee/*
 Copyright: 2006-2013, Andrew N. Sabelnikov
