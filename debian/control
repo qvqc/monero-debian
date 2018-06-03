@@ -2,7 +2,19 @@ Source: monero
 Section: devel
 Priority: extra
 Maintainer: David Mirza Ahmad <dma@subgraph.com>
-Build-Depends: debhelper (>= 9), dh-systemd, build-essential,cmake, libboost-all-dev, libunbound-dev, libssl-dev, pkg-config, libunwind8-dev, graphviz, doxygen, miniupnpc
+Build-Depends:
+ build-essential,
+ cmake,
+ debhelper (>= 9),
+ dh-systemd,
+ doxygen,
+ graphviz,
+ libboost-all-dev,
+ libssl-dev,
+ libunbound-dev,
+ libunwind8-dev,
+ miniupnpc,
+ pkg-config,
 Standards-Version: 3.9.8
 Homepage: https://github.com/monero-project/
 Vcs-Git: https://github.com/subgraph/monero.git
