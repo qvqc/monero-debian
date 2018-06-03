@@ -13,7 +13,7 @@ Build-Depends:
  libssl-dev,
  libunbound-dev,
  libunwind8-dev,
- miniupnpc,
+ libminiupnpc-dev,
  pkg-config,
 Standards-Version: 3.9.8
 Homepage: https://github.com/monero-project/
