@@ -9,10 +9,13 @@ Build-Depends:
  doxygen,
  graphviz,
  libboost-all-dev,
+ libminiupnpc-dev,
+ libpcsclite-dev,
+ libreadline-dev,
  libssl-dev,
  libunbound-dev,
  libunwind-dev,
- libminiupnpc-dev,
+ libzmq3-dev,
  pkg-config,
 Standards-Version: 3.9.8
 Homepage: https://github.com/monero-project/
