@@ -11,7 +11,7 @@ Build-Depends:
  libboost-all-dev,
  libssl-dev,
  libunbound-dev,
- libunwind8-dev,
+ libunwind-dev,
  libminiupnpc-dev,
  pkg-config,
 Standards-Version: 3.9.8
