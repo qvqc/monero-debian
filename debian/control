@@ -3,7 +3,6 @@ Section: devel
 Priority: extra
 Maintainer: David Mirza Ahmad <dma@subgraph.com>
 Build-Depends:
- build-essential,
  cmake,
  debhelper (>= 9),
  dh-systemd,
