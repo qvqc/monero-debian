@@ -5,14 +5,24 @@ Source: https://github.com/monero/monero-core
 Files: *
 Copyright: 2017 Monero
 License: BSD-3-Clause
+
+Files: src/crypto/crypto_ops_builder/ref10/*
+ src/crypto/crypto_ops_builder/ref10CommentedCombined/*
+Copyright: None (in the public domain)
+License: public-domain
+ The Ed25519 software is in the public domain.
 Comment:
- File <src/crypto/crypto_ops_builder/README.md> describes some code
- as being copyright Daniel Bernstein and others.
- Contents of <http://hyperelliptic.org/ebats/supercop-20141124.tar.bz2>,
- referenced in <src/crypto/crypto_ops_builder/ref10/description>,
- indicate however that those original authors dedicated their work
- to the public domain,
- and therefore Monero is the only copyright holder of that code.
+ Convenience code copy
+ of directory <crypto_sign/ed25519/ref10>
+ in tarball <http://hyperelliptic.org/ebats/supercop-20141124.tar.bz2>.
+ .
+ Public domain assignment declared
+ at homepage <https://ed25519.cr.yp.to/software.html>.
+
+Files: src/crypto/crypto_ops_builder/ref10CommentedCombined/MakeCryptoOps.py
+ src/crypto/crypto_ops_builder/ref10CommentedCombined/crypto-ops.h
+Copyright: 2014-2018, The Monero Project
+License: BSD-3-Clause
 
 Files: contrib/epee/*
 Copyright: 2006-2013, Andrew N. Sabelnikov
