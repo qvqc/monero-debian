@@ -50,17 +50,9 @@ Files: external/easylogging++/*
 Copyright: 2017 muflihun.com
 License: Expat
 
-Files: external/miniupnpc/*
-Copyright: 2017 Thomas BERNARD
-License: BSD-3-Clause
-
 Files: external/rapidjson/*
 Copyright: 2017 THL A29 Limited
 License: Expat
-
-Files: external/unbound/*
-Copyright: 2017 NLnet Labs
-License: BSD-3-Clause
 
 Files: external/rapidjson/msinttypes/*
 Copyright:
