@@ -58,6 +58,21 @@ Copyright:
   2015, THL A29 Limited, a Tencent company
 License: BSD-3-clause~product
 
+Files: src/mnemonics/*
+Copyright:
+  dabura667 <matsuringo667@gmail.com>
+  2014, Thomas Voegtlin
+  2014-2018, The Monero Project
+License: BSD-3-clause and Expat
+Comment:
+ Seemingly originates partly from
+ <https://github.com/spesmilo/electrum/blob/master/lib/wordlist>.
+ .
+ Copyright holders partly assumed from Electrum git commits.
+ .
+ Expat license assumed from historical git commits,
+ but disputed: <https://github.com/monero-project/monero/issues/3913>.
+
 Files: contrib/epee/include/hmac-md5.h
  contrib/epee/include/md5global.h
 Copyright: 2001, 2005, - DINH Viet Hoa
