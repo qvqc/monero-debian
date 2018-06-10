@@ -1,7 +1,8 @@
 Source: monero
-Section: devel
-Priority: extra
-Maintainer: David Mirza Ahmad <dma@subgraph.com>
+Section: utils
+Priority: optional
+Maintainer: Debian Bitcoin Packaging Team <pkg-bitcoin-devel@lists.alioth.debian.org>
+Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends:
  cmake,
  debhelper (>= 9),
