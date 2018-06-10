@@ -50,12 +50,6 @@ License-Grant:
  to the Boost Software License, Version 1.0.
 License: BSL-1.0
 
-Files: debian/*
-Copyright: 2016 Subgraph
-License: BSD-3-Clause
-Comment:
- Debian packaging is licensed under the same terms as upstream
-
 Files: external/db_drivers/liblmdb/*
 Copyright: 2011-2017, Howard Chu, Symas Corp
 License-Grant:
@@ -162,6 +156,14 @@ License-Grant:
 License: Expat
 Comment:
  License assumed to be the Expat flavor of MIT licenses.
+
+Files: debian/*
+Copyright:
+  2016, Subgraph
+  2018, Jonas Smedegaard <dr@jones.dk>
+License: BSD-3-Clause and GPL-3+
+Comment:
+ Debian packaging is licensed under the same terms as upstream
 
 License: BSD-2-clause
  Redistribution and use in source and binary forms,
@@ -532,6 +534,9 @@ License: BSD-3-clause~product
  (INCLUDING NEGLIGENCE OR OTHERWISE)
  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: GPL-3+
+License-Reference: /usr/share/common-licenses/GPL-3
 
 License: ISC
  Permission to use, copy, modify, and/or distribute this software
