@@ -42,7 +42,7 @@ License: BSD-3-Clause
 Comment:
  Debian packaging is licensed under the same terms as upstream
 
-Files: external/liblmdb/*
+Files: external/db_drivers/liblmdb/*
 Copyright: 2017 Howard Chu, Symas Corp
 License: OLDAP-2.8
 
