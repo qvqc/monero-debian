@@ -5,7 +5,7 @@ Maintainer: Debian Bitcoin Packaging Team <pkg-bitcoin-devel@lists.alioth.debian
 Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends:
  cmake,
- debhelper (>= 9),
+ debhelper,
  dh-systemd,
  doxygen,
  graphviz,
