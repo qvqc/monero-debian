@@ -1,18 +1,6 @@
-monero (0.11.0.0-3) UNRELEASED; urgency=low
+monero (0.12.2.0~dfsg-1) unstable; urgency=low
 
-    * Update packaging, systemd unit file.
+    * Initial Release.
+      Closes: bug#890974. Thanks to Guido Günther and Subgraph.
 
- -- David Mirza Ahmad <dma@subgraph.com>  Sat, 3 Feb 2018 22:16:00 +0000
-
-monero (0.11.0.0-2) UNRELEASED; urgency=low
-
-    * Update build parameters to support reproducible binaries.
-
- -- David Mirza Ahmad <dma@subgraph.com>  Sun, 21 Jan 2018 00:31:00 +0000
-
-monero (0.11.0.0-1) UNRELEASED; urgency=low
-
-    * Initial Release
-
- -- David Mirza Ahmad <dma@subgraph.com>  Sun, 06 Nov 2017 01:15:05 +0000
-
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 10 Jun 2018 22:56:28 +0200
