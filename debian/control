@@ -18,6 +18,7 @@ Build-Depends:
  libunwind-dev,
  libzmq3-dev,
  pkg-config,
+ rapidjson-dev,
 Standards-Version: 3.9.8
 Homepage: https://github.com/monero-project/
 Vcs-Git: https://github.com/subgraph/monero.git
