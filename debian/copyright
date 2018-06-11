@@ -144,6 +144,11 @@ License: BSD-3-clause and GPL-3+
 Comment:
  Debian packaging is licensed under the same terms as upstream
 
+Files: debian/patches/*
+Copyright:
+  2018, Jonas Smedegaard <dr@jones.dk>
+License: BSD-3-clause
+
 License: BSD-2-clause
  Redistribution and use in source and binary forms,
  with or without modification, are permitted
