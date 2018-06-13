@@ -1,0 +1,26 @@
+Description: skip tests requiring network access
+Author: Jonas Smedegaard <dr@jones.dk>
+License: BSD-3-clause
+Last-Update: 2018-06-13
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/tests/unit_tests/CMakeLists.txt
++++ b/tests/unit_tests/CMakeLists.txt
+@@ -28,7 +28,7 @@
+ 
+ set(unit_tests_sources
+   apply_permutation.cpp
+-  address_from_url.cpp
++#  address_from_url.cpp
+   ban.cpp
+   base58.cpp
+   blockchain_db.cpp
+@@ -41,7 +41,7 @@
+   command_line.cpp
+   crypto.cpp
+   decompose_amount_into_digits.cpp
+-  dns_resolver.cpp
++#  dns_resolver.cpp
+   epee_boosted_tcp_server.cpp
+   epee_levin_protocol_handler_async.cpp
+   epee_utils.cpp
