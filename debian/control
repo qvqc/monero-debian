@@ -28,7 +28,7 @@ Build-Depends:
  pkg-config,
  rapidjson-dev,
 Standards-Version: 4.1.4
-Homepage: https://github.com/monero-project/
+Homepage: https://getmonero.org/
 Vcs-Git: https://github.com/subgraph/monero.git
 
 Package: monero
