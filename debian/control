@@ -37,6 +37,24 @@ Architecture: any
 Built-Using: ${misc:Built-Using}
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Recommends: monero-core (= 0.11.1.0)
-Description: Monero full node p2p client 
- Monero is a p2p cryptocurrency network that implements privacy by default. This package installs the full node client, and configures it to run as a systemd service.
+Description: cryptocoin client for Monero network - daemon and tools
+ This package provides Full Monero client daemon monerod,
+ and command-line tools to interact with the daemon.
  .
+ Full Monero client (a.k.a. Monero Core) is a full-node wallet
+ for the Monero network.
+ .
+ Monero (XMR) is an open-source cryptocurrency
+ that focuses on privacy and decentralization.
+ Monero uses a public ledger to record transactions
+ while new units are created through a process called mining.
+ Monero aims to improve on existing cryptocurrency design
+ by obscuring sender, recipient and amount of every transaction made
+ as well as making the mining process more egalitarian.
+ .
+ Beware that full global transaction history (blockchain) is stored locally,
+ which may require very large amounts of disk space.
+ .
+ Disk space requirements (as of June 2018):
+ ~40 gigabyte data, ~50 gigabyte on disk, growing ~2 gigabyte per month.
+ More info at <https://moneroblocks.info/stats/blockchain-growth>.
