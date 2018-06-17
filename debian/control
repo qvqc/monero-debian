@@ -1,7 +1,7 @@
 Source: monero
 Section: utils
 Priority: optional
-Maintainer: Debian Bitcoin Packaging Team <pkg-bitcoin-devel@lists.alioth.debian.org>
+Maintainer: Debian Cryptocoin Team <team+cryptocoin@tracker.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends:
  cmake,
