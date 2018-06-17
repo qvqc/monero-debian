@@ -17,4 +17,5 @@ override_dh_auto_clean:
 	dh_auto_clean
 
 override_dh_systemd_enable:
+	install -m 644 -t debian utils/systemd/monero.service
 	dh_systemd_enable --no-enable
