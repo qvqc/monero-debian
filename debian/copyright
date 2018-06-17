@@ -15,7 +15,7 @@ Copyright:
   2012-2013, The Cryptonote developers
   2014-2018, The Monero Project
   2017, Raymond Chen, Microsoft
-License: BSD-3-Clause
+License: BSD-3-clause
 
 Files: src/crypto/crypto_ops_builder/ref10/*
  src/crypto/crypto_ops_builder/ref10CommentedCombined/*
@@ -33,11 +33,11 @@ Comment:
 Files: src/crypto/crypto_ops_builder/ref10CommentedCombined/MakeCryptoOps.py
  src/crypto/crypto_ops_builder/ref10CommentedCombined/crypto-ops.h
 Copyright: 2014-2018, The Monero Project
-License: BSD-3-Clause
+License: BSD-3-clause
 
 Files: contrib/epee/*
 Copyright: 2006-2013, Andrew N. Sabelnikov <http://www.sabelnikov.net/>
-License: BSD-3-Clause
+License: BSD-3-clause
 
 Files: external/boost/*
 Copyright: 2002-2007, Robert Ramey <http://www.rrsd.com/>
@@ -140,7 +140,7 @@ Files: debian/*
 Copyright:
   2016, Subgraph
   2018, Jonas Smedegaard <dr@jones.dk>
-License: BSD-3-Clause and GPL-3+
+License: BSD-3-clause and GPL-3+
 Comment:
  Debian packaging is licensed under the same terms as upstream
 
@@ -295,7 +295,7 @@ License: BSL-1.0
  ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-License: BSD-3-Clause
+License: BSD-3-clause
  Redistribution and use in source and binary forms,
  with or without modification, are permitted
  provided that the following conditions are met:
