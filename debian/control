@@ -34,9 +34,7 @@ Vcs-Browser: https://salsa.debian.org/cryptocoin-team/monero
 
 Package: monero
 Architecture: any
-Built-Using: ${misc:Built-Using}
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Recommends: monero-core (= 0.11.1.0)
 Description: cryptocoin client for Monero network - daemon and tools
  This package provides Full Monero client daemon monerod,
  and command-line tools to interact with the daemon.
