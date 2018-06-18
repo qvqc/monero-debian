@@ -1,0 +1,5 @@
+  * Build shared libs (-DBUILD_SHARED_LIBS=ON -DBUILD_GUI_DEPS=ON):
+    + Fix cover install of all libs in upstream build routines.
+    + Fix tighten namespace (seemingly same across cryptonote forks).
+    + Extend testsuite rules
+      (see tests/libwallet_api_tests/scripts/README.md)
