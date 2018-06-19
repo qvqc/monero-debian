@@ -6,7 +6,6 @@ Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends:
  cmake,
  debhelper,
- dh-systemd,
  doxygen,
  graphviz,
  libboost-chrono-dev,

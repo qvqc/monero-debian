@@ -1,9 +1,0 @@
-#!/bin/sh
-
-set -e
-
-if [ "$1" = "configure" ]; then
-	adduser --system --quiet --group --home /var/lib/monero monero || :
-fi
-
-#DEBHELPER#
