@@ -3,4 +3,4 @@ monero (0.12.2.0~dfsg-1) unstable; urgency=low
     * Initial Release.
       Closes: bug#890974. Thanks to Guido Günther and Subgraph.
 
- -- Jonas Smedegaard <dr@jones.dk>  Sun, 10 Jun 2018 22:56:28 +0200
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 19 Jun 2018 11:26:34 +0200
