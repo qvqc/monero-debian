@@ -25,6 +25,7 @@ Build-Depends:
  libunwind-dev,
  libzmq3-dev,
  pkg-config,
+ qtchooser,
  rapidjson-dev,
 Standards-Version: 4.1.4
 Homepage: https://getmonero.org/
