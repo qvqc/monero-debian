@@ -1,3 +1,14 @@
+monero (0.12.2.0~dfsg-2) unstable; urgency=medium
+
+  * Update copyright info: Fix list files copyright Google.
+    Closes: Bug#901915. Thanks to Chris Lamb.
+  * Update package relations:
+    + Build-depend on qtchooser, needed to generate translation files.
+    + Stop build-depend on libunwind-dev: Unneeded (internal fork of
+      easylogging++ used instead).
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 20 Jun 2018 21:51:20 +0200
+
 monero (0.12.2.0~dfsg-1) unstable; urgency=low
 
     * Initial Release.
