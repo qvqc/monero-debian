@@ -22,7 +22,6 @@ Build-Depends:
  libreadline-dev,
  libssl-dev,
  libunbound-dev,
- libunwind-dev,
  libzmq3-dev,
  pkg-config,
  qtchooser,
