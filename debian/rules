@@ -16,8 +16,10 @@ override_dh_auto_test:
 	HOME="${FAKEHOME}" dh_auto_test -- ARGS+=--verbose
 
 override_dh_install:
-	rm -rf debian/monero/usr/include
 	dh_install
+
+override_dh_missing:
+	dh_missing --fail-missing
 
 override_dh_auto_clean:
 	rm -rf "$(FAKEHOME)"

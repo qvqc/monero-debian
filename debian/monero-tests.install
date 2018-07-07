@@ -1,0 +1,17 @@
+obj-*/tests/hash-target-tests usr/lib/monero/tests/bin
+obj-*/tests/core_proxy/core_proxy usr/lib/monero/tests/bin
+obj-*/tests/core_tests/core_tests usr/lib/monero/tests/bin
+obj-*/tests/crypto/cncrypto-tests usr/lib/monero/tests/bin
+obj-*/tests/difficulty/difficulty-tests usr/lib/monero/tests/bin
+obj-*/tests/functional_tests/functional_tests usr/lib/monero/tests/bin
+obj-*/tests/fuzz/*_fuzz_tests usr/lib/monero/tests/bin
+obj-*/tests/hash/hash-tests usr/lib/monero/tests/bin
+obj-*/tests/net_load_tests/net_load_tests_clt usr/lib/monero/tests/bin
+obj-*/tests/net_load_tests/net_load_tests_srv usr/lib/monero/tests/bin
+obj-*/tests/performance_tests/performance_tests usr/lib/monero/tests/bin
+obj-*/tests/unit_tests/unit_tests usr/lib/monero/tests/bin
+
+tests/crypto/tests.txt usr/share/monero/testdata/crypto
+tests/data/* usr/share/monero/testdata
+tests/difficulty/data.txt usr/share/monero/testdata/difficulty
+tests/hash/tests-*.txt usr/share/monero/testdata/hash
