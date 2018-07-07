@@ -17,6 +17,7 @@ Build-Depends:
  libboost-serialization-dev,
  libboost-system-dev,
  libboost-thread-dev,
+ libdb-dev,
  libminiupnpc-dev,
  libpcsclite-dev,
  libreadline-dev,
