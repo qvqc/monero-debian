@@ -30,6 +30,7 @@ Standards-Version: 4.1.4
 Homepage: https://getmonero.org/
 Vcs-Git: https://salsa.debian.org/cryptocoin-team/monero.git
 Vcs-Browser: https://salsa.debian.org/cryptocoin-team/monero
+Rules-Requires-Root: no
 
 Package: monero
 Architecture: any
