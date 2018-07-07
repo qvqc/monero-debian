@@ -1,0 +1,3 @@
+Tests: monero-tests
+Depends: monero-tests
+Restrictions: allow-stderr

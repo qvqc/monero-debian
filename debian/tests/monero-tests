@@ -1,0 +1,25 @@
+#!/bin/sh
+set -e
+
+cd $ADTTMP
+export HOME=$PWD/home
+mkdir -p $HOME
+export TMP=$PWD
+export TMPDIR=$PWD
+
+# apparently requires dnssec name resolving not always available
+export GTEST_FILTER=AddressFromURL.Failure
+
+/usr/lib/monero/tests/bin/hash-target-tests
+/usr/lib/monero/tests/bin/core_tests --generate_and_play_test_data
+/usr/lib/monero/tests/bin/cncrypto-tests /usr/share/monero/testdata/crypto/tests.txt
+/usr/lib/monero/tests/bin/unit_tests --data-dir /usr/share/monero/testdata
+/usr/lib/monero/tests/bin/difficulty-tests /usr/share/monero/testdata/difficulty/data.txt
+/usr/lib/monero/tests/bin/hash/hash-tests fast /usr/share/monero/testdata/hash/tests-fast.txt
+/usr/lib/monero/tests/bin/hash/hash-tests slow /usr/share/monero/testdata/hash/tests-slow.txt
+/usr/lib/monero/tests/bin/hash/hash-tests slow-1 /usr/share/monero/testdata/hash/tests-slow-1.txt
+/usr/lib/monero/tests/bin/hash/hash-tests tree /usr/share/monero/testdata/hash/tests-tree.txt
+/usr/lib/monero/tests/bin/hash/hash-tests extra-blake /usr/share/monero/testdata/hash/tests-extra-blake.txt
+/usr/lib/monero/tests/bin/hash/hash-tests extra-groestl /usr/share/monero/testdata/hash/tests-extra-groestl.txt
+/usr/lib/monero/tests/bin/hash/hash-tests jh /usr/share/monero/testdata/hash/tests-jh.txt
+/usr/lib/monero/tests/bin/hash/hash-tests skein /usr/share/monero/testdata/hash/tests-skein.txt
