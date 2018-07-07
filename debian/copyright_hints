@@ -46,7 +46,9 @@ Files: Dockerfile
  debian/compat
  debian/control
  debian/gbp.conf
+ debian/monero-tests.install
  debian/monero.examples
+ debian/monero.install
  debian/monero.lintian-overrides
  debian/patches/series
  debian/rules
@@ -986,12 +988,6 @@ Copyright: 2011, Micael Hildenborg
 License: BSD-3-clause
  FIXME
 
-Files: debian/patches/2001_system_shared_libs.patch
- debian/patches/2002_testsuite_avoid_net.patch
-Copyright: NONE
-License: BSD-3-clause
- FIXME
-
 Files: external/boost/archive/portable_binary_iarchive.hpp
  external/boost/archive/portable_binary_oarchive.hpp
 Copyright: 2002, -7 Robert Ramey - http:www.rrsd.com .
@@ -1051,6 +1047,11 @@ License: BSD-3-clause
 Files: contrib/epee/include/net/connection_basic.hpp
 Copyright: 2014-2018, The Monero Project
   able ;)
+License: BSD-3-clause
+ FIXME
+
+Files: debian/patches/2001_system_shared_libs.patch
+Copyright: NONE
 License: BSD-3-clause
  FIXME
 
