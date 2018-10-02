@@ -1,3 +1,13 @@
+monero (0.12.3.0~dfsg-2) unstable; urgency=medium
+
+  * Fix autopkgtest.
+  * Add patch cherry-picked upstream to add new DNSSEC trust anchor for
+    rollover.
+    Closes: Bug#909021. Thanks to Santiago R.R.
+  * Declare compliance with Debian Policy 4.2.1.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 02 Oct 2018 15:33:55 +0200
+
 monero (0.12.3.0~dfsg-1) unstable; urgency=medium
 
   [ upstream ]
