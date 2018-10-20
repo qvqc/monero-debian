@@ -8,7 +8,7 @@ export TMP=$PWD
 export TMPDIR=$PWD
 
 # apparently requires dnssec name resolving not always available
-export GTEST_FILTER="-AddressFromURL.Failure"
+export GTEST_FILTER="-AddressFromURL.Failure:DNSResolver.DNSSEC*"
 
 /usr/lib/monero/tests/bin/hash-target-tests
 /usr/lib/monero/tests/bin/core_tests --generate_and_play_test_data
