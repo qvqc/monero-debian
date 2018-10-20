@@ -1,3 +1,27 @@
+monero (0.13.0.3-1) unstable; urgency=high
+
+  [ upstream ]
+  * New release(s).
+    + Supports Monero network hardfork.
+      Closes: Bug#911463, #911466. Thanks to Hypertropho.
+
+  [ Jonas Smedegaard ]
+  * Update copyright info:
+    + Stop repackage source: Upstream no longer ships non-free files.
+    + Track autotools files.
+    + Track cmake script licensed BSL-1.0.
+  * Drop patch cherry-picked upstream and now applied.
+  * Unfuzz and update patch 2001.
+  * Update package reations:
+    + Build-depend on libhidapi-dev (not libpcsclite-dev).
+    + Build-depend on libgtest-dev libsodium-dev.
+  * Set urgency=high due to Monero network hardfork.
+  * Add patch 1001 to avoid non-UTF8 chars
+    maybe causing out of memory in gcc.
+  * Have autopkgtest skip two more DNSSEC tests.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 20 Oct 2018 18:27:13 +0200
+
 monero (0.12.3.0~dfsg-2) unstable; urgency=medium
 
   * Fix autopkgtest.

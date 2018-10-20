@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: FIXME
 Upstream-Contact: FIXME
 Source: FIXME
@@ -12,8 +12,71 @@ Files: Dockerfile
  cmake/Doxyfile.in
  cmake/Doxygen.extra.css.in
  cmake/FindMiniupnpc.cmake
- cmake/FindPCSC.cmake
  cmake/FindReadline.cmake
+ contrib/codefresh/codefresh.yml
+ contrib/depends/Makefile
+ contrib/depends/README.md
+ contrib/depends/builders/darwin.mk
+ contrib/depends/builders/default.mk
+ contrib/depends/builders/linux.mk
+ contrib/depends/config.site.in
+ contrib/depends/description.md
+ contrib/depends/funcs.mk
+ contrib/depends/hosts/darwin.mk
+ contrib/depends/hosts/default.mk
+ contrib/depends/hosts/linux.mk
+ contrib/depends/hosts/mingw32.mk
+ contrib/depends/packages.md
+ contrib/depends/packages/bdb.mk
+ contrib/depends/packages/boost.mk
+ contrib/depends/packages/cmake/conf/mxe-conf.cmake.in
+ contrib/depends/packages/cmake/conf/target-cmake.in
+ contrib/depends/packages/cmake/test/CMakeLists.txt
+ contrib/depends/packages/cppzmq.mk
+ contrib/depends/packages/eudev.mk
+ contrib/depends/packages/expat.mk
+ contrib/depends/packages/graphviz.mk
+ contrib/depends/packages/hidapi.mk
+ contrib/depends/packages/icu4c.mk
+ contrib/depends/packages/ldns.mk
+ contrib/depends/packages/libICE.mk
+ contrib/depends/packages/libSM.mk
+ contrib/depends/packages/libevent.mk
+ contrib/depends/packages/libiconv.mk
+ contrib/depends/packages/libusb.mk
+ contrib/depends/packages/miniupnpc.mk
+ contrib/depends/packages/native_biplist.mk
+ contrib/depends/packages/native_ccache.mk
+ contrib/depends/packages/native_cctools.mk
+ contrib/depends/packages/native_cdrkit.mk
+ contrib/depends/packages/native_ds_store.mk
+ contrib/depends/packages/native_libdmg-hfsplus.mk
+ contrib/depends/packages/native_mac_alias.mk
+ contrib/depends/packages/openssl.mk
+ contrib/depends/packages/packages.mk
+ contrib/depends/packages/protobuf.mk
+ contrib/depends/packages/qt.mk
+ contrib/depends/packages/readline.mk
+ contrib/depends/packages/sodium-darwin.mk
+ contrib/depends/packages/sodium.mk
+ contrib/depends/packages/unbound.mk
+ contrib/depends/packages/unwind.mk
+ contrib/depends/packages/xproto.mk
+ contrib/depends/packages/zeromq.mk
+ contrib/depends/packages/zlib.mk
+ contrib/depends/patches/cmake/cmake-1-fixes.patch
+ contrib/depends/patches/icu4c/icu-001-dont-build-static-dynamic-twice.patch
+ contrib/depends/patches/native_biplist/sorted_list.patch
+ contrib/depends/patches/native_cdrkit/cdrkit-deterministic.patch
+ contrib/depends/patches/native_mac_alias/python3.patch
+ contrib/depends/patches/qt/fix_qt_pkgconfig.patch
+ contrib/depends/patches/qt/pidlist_absolute.patch
+ contrib/depends/patches/qt/qfixed-coretext.patch
+ contrib/depends/patches/readline/readline-1.patch
+ contrib/depends/patches/zeromq/9114d3957725acd34aa8b8d011585812f3369411.patch
+ contrib/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch
+ contrib/depends/protobuf.mk
+ contrib/depends/toolchain.cmake.in
  contrib/epee/README.md
  contrib/epee/demo/CMakeLists.txt
  contrib/epee/demo/demo_http_server/stdafx.cpp
@@ -40,6 +103,7 @@ Files: Dockerfile
  contrib/rlwrap/monerocommands_monero-wallet-cli.txt
  contrib/snap/monerod-wrapper
  contrib/snap/monerod.conf
+ contrib/snap/setup/gui/icon.png
  contrib/snap/snapcraft.yaml
  contrib/valgrind/monero.supp
  debian/TODO
@@ -50,9 +114,12 @@ Files: Dockerfile
  debian/monero.examples
  debian/monero.install
  debian/monero.lintian-overrides
+ debian/not-installed
  debian/patches/series
  debian/rules
  debian/source/format
+ debian/tests/control
+ debian/tests/monero-tests
  debian/watch
  external/db_drivers/liblmdb/CHANGES
  external/db_drivers/liblmdb/Doxyfile
@@ -68,6 +135,7 @@ Files: Dockerfile
  src/crypto/crypto_ops_builder/crypto_sign.h
  src/crypto/crypto_ops_builder/crypto_uint32.h
  src/crypto/crypto_ops_builder/crypto_verify_32.h
+ src/crypto/crypto_ops_builder/ietf.txt
  src/crypto/crypto_ops_builder/include/Makefile.am
  src/crypto/crypto_ops_builder/include/sodium.h
  src/crypto/crypto_ops_builder/include/sodium/crypto_int32.h
@@ -80,6 +148,7 @@ Files: Dockerfile
  src/crypto/crypto_ops_builder/include/sodium/randombytes.h
  src/crypto/crypto_ops_builder/randombytes.c
  src/crypto/crypto_ops_builder/ref10/Makefile
+ src/crypto/crypto_ops_builder/ref10/README.md
  src/crypto/crypto_ops_builder/ref10/api.h
  src/crypto/crypto_ops_builder/ref10/base.h
  src/crypto/crypto_ops_builder/ref10/base.py
@@ -235,7 +304,7 @@ Files: Dockerfile
  src/crypto/keccak.h
  src/crypto/skein.c
  src/crypto/skein.h
- src/rpc/get_output_distribution_cache.h
+ src/crypto/variant2_int_sqrt.h
  src/version.cpp.in
  src/version.h
  src/wallet/api/common_defines.h
@@ -253,6 +322,7 @@ Files: Dockerfile
  tests/hash/tests-extra-skein.txt
  tests/hash/tests-fast.txt
  tests/hash/tests-slow-1.txt
+ tests/hash/tests-slow-2.txt
  tests/hash/tests-slow.txt
  tests/hash/tests-tree.txt
  tests/libwallet_api_tests/scripts/README.md
@@ -266,6 +336,8 @@ Files: Dockerfile
  tests/libwallet_api_tests/scripts/open_wallet_5.sh
  tests/libwallet_api_tests/scripts/open_wallet_miner.sh
  tests/libwallet_api_tests/scripts/send_funds.sh
+ tests/unit_tests/is_hdd.cpp
+ tests/unit_tests/json_serialization.cpp
  translations/monero.ts
  translations/monero_it.ts
  translations/monero_sv.ts
@@ -286,6 +358,7 @@ Files: Dockerfile
  utils/gpg_keys/moneromooo.asc
  utils/gpg_keys/nanoakron.asc
  utils/gpg_keys/oranjuice.asc
+ utils/gpg_keys/sarang.asc
  utils/gpg_keys/stoffu.asc
  utils/gpg_keys/tewinget.asc
  utils/gpg_keys/tomerkon.asc
@@ -456,6 +529,8 @@ Files: CMakeLists.txt
  tests/core_tests/block_reward.h
  tests/core_tests/block_validation.cpp
  tests/core_tests/block_validation.h
+ tests/core_tests/bulletproofs.cpp
+ tests/core_tests/bulletproofs.h
  tests/core_tests/chain_split_1.cpp
  tests/core_tests/chain_split_1.h
  tests/core_tests/chain_switch_1.cpp
@@ -506,12 +581,15 @@ Files: CMakeLists.txt
  tests/net_load_tests/clt.cpp
  tests/net_load_tests/net_load_tests.h
  tests/net_load_tests/srv.cpp
+ tests/performance_tests/bulletproof.h
  tests/performance_tests/check_tx_signature.h
  tests/performance_tests/cn_fast_hash.h
  tests/performance_tests/cn_slow_hash.h
  tests/performance_tests/construct_tx.h
+ tests/performance_tests/crypto_ops.h
  tests/performance_tests/derive_public_key.h
  tests/performance_tests/derive_secret_key.h
+ tests/performance_tests/equality.h
  tests/performance_tests/ge_frombytes_vartime.h
  tests/performance_tests/generate_key_derivation.h
  tests/performance_tests/generate_key_image.h
@@ -520,9 +598,12 @@ Files: CMakeLists.txt
  tests/performance_tests/is_out_to_acc.h
  tests/performance_tests/main.cpp
  tests/performance_tests/multi_tx_test_base.h
+ tests/performance_tests/multiexp.h
  tests/performance_tests/performance_tests.h
  tests/performance_tests/performance_utils.h
+ tests/performance_tests/range_proof.h
  tests/performance_tests/rct_mlsag.h
+ tests/performance_tests/signature.h
  tests/performance_tests/single_tx_test_base.h
  tests/performance_tests/subaddress_expand.h
  tests/unit_tests/ban.cpp
@@ -565,6 +646,7 @@ Copyright: 2012-2013, The Cryptonote developers
   2014-2018, The Monero Project
   2016-2018, The Monero Project
   2017-2018, The Monero Project
+  2018, The Monero Project
 License: BSD-3-clause
  FIXME
 
@@ -577,7 +659,9 @@ Files: Makefile
  cmake/test-static-assert.cpp
  contrib/CMakeLists.txt
  contrib/epee/CMakeLists.txt
+ contrib/epee/include/fnv1.h
  contrib/epee/include/hex.h
+ contrib/epee/include/mlocker.h
  contrib/epee/include/net/http_auth.h
  contrib/epee/include/net/network_throttle-detail.hpp
  contrib/epee/include/net/network_throttle.hpp
@@ -587,6 +671,7 @@ Files: Makefile
  contrib/epee/src/connection_basic.cpp
  contrib/epee/src/hex.cpp
  contrib/epee/src/http_auth.cpp
+ contrib/epee/src/mlocker.cpp
  contrib/epee/src/network_throttle-detail.cpp
  contrib/epee/src/network_throttle.cpp
  contrib/epee/src/wipeable_string.cpp
@@ -601,7 +686,9 @@ Files: Makefile
  src/blockchain_db/lmdb/db_lmdb.cpp
  src/blockchain_db/lmdb/db_lmdb.h
  src/blockchain_utilities/CMakeLists.txt
+ src/blockchain_utilities/blockchain_ancestry.cpp
  src/blockchain_utilities/blockchain_blackball.cpp
+ src/blockchain_utilities/blockchain_depth.cpp
  src/blockchain_utilities/blockchain_export.cpp
  src/blockchain_utilities/blockchain_import.cpp
  src/blockchain_utilities/blockchain_usage.cpp
@@ -614,19 +701,28 @@ Files: Makefile
  src/blocks/CMakeLists.txt
  src/checkpoints/CMakeLists.txt
  src/common/CMakeLists.txt
+ src/common/aligned.c
+ src/common/aligned.h
  src/common/dns_utils.cpp
  src/common/dns_utils.h
  src/common/download.cpp
  src/common/download.h
+ src/common/error.cpp
+ src/common/error.h
+ src/common/expect.h
  src/common/http_connection.h
  src/common/i18n.cpp
  src/common/i18n.h
  src/common/json_util.h
+ src/common/notify.cpp
+ src/common/notify.h
  src/common/perf_timer.cpp
  src/common/perf_timer.h
  src/common/rpc_client.h
  src/common/scoped_message_writer.h
  src/common/sfinae_helpers.h
+ src/common/spawn.cpp
+ src/common/spawn.h
  src/common/stack_trace.cpp
  src/common/stack_trace.h
  src/common/threadpool.cpp
@@ -671,6 +767,8 @@ Files: Makefile
  src/device/device.hpp
  src/device/device_default.cpp
  src/device/device_default.hpp
+ src/device/device_io.hpp
+ src/device/device_io_hid.hpp
  src/device/device_ledger.cpp
  src/device/device_ledger.hpp
  src/device/log.cpp
@@ -696,6 +794,8 @@ Files: Makefile
  src/ringct/CMakeLists.txt
  src/ringct/bulletproofs.cc
  src/ringct/bulletproofs.h
+ src/ringct/multiexp.cc
+ src/ringct/multiexp.h
  src/rpc/CMakeLists.txt
  src/rpc/daemon_handler.cpp
  src/rpc/daemon_handler.h
@@ -732,9 +832,15 @@ Files: Makefile
  tests/daemon_tests/CMakeLists.txt
  tests/difficulty/CMakeLists.txt
  tests/functional_tests/CMakeLists.txt
+ tests/functional_tests/blockchain.py
+ tests/functional_tests/speed.py
+ tests/functional_tests/test_framework/daemon.py
+ tests/functional_tests/test_framework/rpc.py
+ tests/functional_tests/test_framework/wallet.py
  tests/fuzz/CMakeLists.txt
  tests/fuzz/base58.cpp
  tests/fuzz/block.cpp
+ tests/fuzz/bulletproof.cpp
  tests/fuzz/cold-outputs.cpp
  tests/fuzz/cold-transaction.cpp
  tests/fuzz/fuzzer.cpp
@@ -752,28 +858,40 @@ Files: Makefile
  tests/performance_tests/CMakeLists.txt
  tests/performance_tests/sc_reduce32.h
  tests/unit_tests/CMakeLists.txt
+ tests/unit_tests/account.cpp
  tests/unit_tests/address_from_url.cpp
+ tests/unit_tests/aligned.cpp
  tests/unit_tests/apply_permutation.cpp
  tests/unit_tests/block_queue.cpp
  tests/unit_tests/blockchain_db.cpp
  tests/unit_tests/command_line.cpp
  tests/unit_tests/crypto.cpp
+ tests/unit_tests/device.cpp
  tests/unit_tests/dns_resolver.cpp
  tests/unit_tests/epee_utils.cpp
+ tests/unit_tests/expect.cpp
  tests/unit_tests/hashchain.cpp
  tests/unit_tests/http.cpp
+ tests/unit_tests/keccak.cpp
  tests/unit_tests/memwipe.cpp
+ tests/unit_tests/mlocker.cpp
  tests/unit_tests/mnemonics.cpp
+ tests/unit_tests/multiexp.cpp
  tests/unit_tests/multisig.cpp
  tests/unit_tests/output_selection.cpp
+ tests/unit_tests/random.cpp
+ tests/unit_tests/ringdb.cpp
  tests/unit_tests/sha256.cpp
+ tests/unit_tests/threadpool.cpp
  tests/unit_tests/uri.cpp
  tests/unit_tests/vercmp.cpp
+ tests/unit_tests/wipeable_string.cpp
  translations/CMakeLists.txt
  utils/build_scripts/windows.bat
 Copyright: 2014-2017, The Monero Project
   2014-2018, The Monero Project
   2016-2018, The Monero Project
+  2017, The Monero Project
   2017-2018, The Monero Project
   2018, The Monero Project
 License: BSD-3-clause
@@ -962,6 +1080,13 @@ Copyright: 2012, Nabil S. Al Ramli, www.nalramli.com
 License: BSD-2-clause
  FIXME
 
+Files: debian/patches/1001_avoid_non-UTF8_chars.patch
+ debian/patches/2001_system_shared_libs.patch
+ src/common/expect.cpp
+Copyright: NONE
+License: BSD-3-clause
+ FIXME
+
 Files: src/mnemonics/chinese_simplified.h
  src/mnemonics/japanese.h
  src/mnemonics/portuguese.h
@@ -993,6 +1118,12 @@ Files: external/boost/archive/portable_binary_iarchive.hpp
 Copyright: 2002, -7 Robert Ramey - http:www.rrsd.com .
   2002, Robert Ramey - http:www.rrsd.com .
 License: BSL-1.0
+ FIXME
+
+Files: contrib/depends/config.guess
+ contrib/depends/config.sub
+Copyright: 1992-2017, Free Software Foundation, Inc.
+License: GPL-3
  FIXME
 
 Files: cmake/FindBerkeleyDB.cmake
@@ -1050,11 +1181,6 @@ Copyright: 2014-2018, The Monero Project
 License: BSD-3-clause
  FIXME
 
-Files: debian/patches/2001_system_shared_libs.patch
-Copyright: NONE
-License: BSD-3-clause
- FIXME
-
 Files: src/mnemonics/spanish.h
 Copyright: 2014-2018, The Monero Project
   ano",
@@ -1094,6 +1220,11 @@ Copyright: 1991, -2, RSA Data Security, Inc. Created 1991. All
 License: BSD-3-clause and/or NTP
  FIXME
 
+Files: src/device/device_io_hid.cpp
+Copyright: NONE
+License: BSD~unspecified
+ FIXME
+
 Files: src/daemonizer/posix_fork.cpp
 Copyright: 2003-2011, Christopher M. Kohlhoff (chris at kohlhoff dot com)
 License: BSL-1.0
@@ -1101,6 +1232,11 @@ License: BSL-1.0
 
 Files: external/boost/archive/portable_binary_archive.hpp
 Copyright: 2002, Robert Ramey - http:www.rrsd.com .
+License: BSL-1.0
+ FIXME
+
+Files: cmake/FindHIDAPI.cmake
+Copyright: Iowa State University 2009-2010.
 License: BSL-1.0
  FIXME
 
@@ -1189,21 +1325,27 @@ License: UNKNOWN
 Files: translations/monero_fr.ts
 Copyright: tiquette avec espaces autorisÃ©s&gt; | all | &lt;index_min&gt; [&lt;index_max&gt;
   tiquette de l&apos;adresse spÃ©cifiÃ©e par &lt;index&gt;.</translation>
-  tiquette de sous-adresseÂ
+  tiquette de sous-adresse&#xa0;: </translation>
   tiquette du compte spÃ©cifiÃ© par &lt;index&gt;.
   transaction&gt; &lt;adresse&gt;</translation>
   tÃ© construite</translation>
-  tÃ© rejetÃ©e par le dÃ©mon avec le statutÂ
+  tÃ© rejetÃ©e par le dÃ©mon avec le statut&#xa0;: </translation>
   tÃ© reÃ§u dans cette transaction.</translation>
   tÃ© stoppÃ©e dans le dÃ©mon</translation>
-  tÃ© stoppÃ©eÂ
+  tÃ© stoppÃ©e&#xa0;: </translation>
   tÃ© utilisÃ© auparavant, veuillez utiliser un nouveau portefeuille pour crÃ©er un portefeuille multisig</translation>
   une version obsolÃ¨te du portefeuille. Le format de votre fichier portefeuille est en cours de mise Ã
   une version obsolÃ¨te du portefeuille. Veuillez dorÃ©navant utiliser la nouvelle phrase mnÃ©monique que nous fournissons.
   une version obsolÃ¨te du portefeuille. Veuillez procÃ©der Ã
+  ussie</translation>
+  utilisant les clÃ©s.
+  utilisez pas vos clÃ©s Monero avec un autre fork, Ã MOINS QUE ce fork inclue des mitigations contre la rÃ©utilisation des clÃ©s. Faire ceci nuira Ã
   verrouillÃ©</translation>
   verrouillÃ©e au bloc %llu, dans approximativement %s jours (en supposant 2 minutes par bloc)</translation>
-  Ã©criture du portefeuilleÂ
+  vers : </translation>
+  veuillez considÃ©rer l&apos;utilisation de sous-adresses Ã
+  voyez de dÃ©penser des sorties Ã
+  Ã©criture du portefeuille&#xa0;: </translation>
   Ã©e ne sera pas transmise au rÃ©seau monero</translation>
 License: UNKNOWN
  FIXME
