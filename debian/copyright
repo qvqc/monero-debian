@@ -1,14 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: Monero
 Source: https://github.com/monero/monero-core
- Repackaged, excluding non-DFSG files:
-  * Non-free licensed RFC document
-    <https://github.com/monero-project/monero/issues/3943>
-  * Image file with embedded non-free licensed ICC profile
-    <https://github.com/monero-project/monero/issues/3944>
-Files-Excluded:
- contrib/snap/setup/gui/icon.png
- src/crypto/crypto_ops_builder/ietf.txt
 
 Files: *
 Copyright:
