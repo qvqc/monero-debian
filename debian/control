@@ -19,7 +19,7 @@ Build-Depends:
  libboost-thread-dev,
  libdb-dev,
  libminiupnpc-dev,
- libpcsclite-dev,
+ libhidapi-dev,
  libreadline-dev,
  libssl-dev,
  libunbound-dev,
