@@ -42,6 +42,12 @@ License-Grant:
  to the Boost Software License, Version 1.0.
 License: BSL-1.0
 
+Files: cmake/FindHIDAPI.cmake
+Copyright: 2009-2010, Iowa State University
+License-Grant:
+ Distributed under the Boost Software License, Version 1.0.
+License: BSL-1.0
+
 Files: external/db_drivers/liblmdb/*
 Copyright: 2011-2017, Howard Chu, Symas Corp
 License-Grant:
