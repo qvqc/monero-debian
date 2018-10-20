@@ -1,0 +1,30 @@
+Description: avoid non-UTF8 chars maybe causing out of memory in gcc
+Author: Jonas Smedegaard <dr@jones.dk>
+License: BSD-3-clause
+Last-Update: 2018-10-20
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/contrib/epee/include/net/local_ip.h
++++ b/contrib/epee/include/net/local_ip.h
+@@ -36,9 +36,9 @@
+     {
+       /*
+       local ip area
+-      10.0.0.0 — 10.255.255.255 
+-      172.16.0.0 — 172.31.255.255 
+-      192.168.0.0 — 192.168.255.255 
++      10.0.0.0 - 10.255.255.255 
++      172.16.0.0 - 172.31.255.255 
++      192.168.0.0 - 192.168.255.255 
+       */
+       if( (ip | 0xffffff00) == 0xffffff0a)
+         return true;
+@@ -62,7 +62,7 @@
+       //MAKE_IP
+       /*
+       loopback ip
+-      127.0.0.0 — 127.255.255.255 
++      127.0.0.0 - 127.255.255.255 
+       */
+       return false;
+     }
