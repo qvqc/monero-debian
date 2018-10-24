@@ -1,7 +1,16 @@
-monero (0.13.0.3-1) unstable; urgency=high
+monero (0.13.0.4-1) unstable; urgency=medium
 
   [ upstream ]
-  * New release(s).
+  * New release.
+
+  [ Jonas Smedegaard ]
+  * Update package relations:
+    + Build-depend on libhidapi-dev only on non-kfreebsd and non-hurd.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 25 Oct 2018 01:40:16 +0200
+
+monero (0.13.0.3-1) unstable; urgency=high
+
     + Supports Monero network hardfork.
       Closes: Bug#911463, #911466. Thanks to Hypertropho.
 
