@@ -1,6 +1,6 @@
 Description: ubuntu 16 ppc build fixes
 Author: Jethro Grassie <jtg@xtrabass.com>
-Origin: upstream, https://github.com/monero/monero-core/commit/
+Origin: upstream, https://github.com/monero/monero-core/commit/f92682e
 Last-Update: 2018-11-20
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/

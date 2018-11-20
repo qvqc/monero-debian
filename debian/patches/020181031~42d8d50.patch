@@ -1,6 +1,6 @@
 Description: fix AES encryption on big endian
 Author: xiphon <xiphon@protonmail.com>
-Origin: upstream, https://github.com/monero/monero-core/commit/
+Origin: upstream, https://github.com/monero/monero-core/commit/42d8d50
 Last-Update: 2018-11-20
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/

@@ -1,6 +1,6 @@
 Description: fix hash_permutation on big endian
 Author: moneromooo-monero <moneromooo-monero@users.noreply.github.com>
-Origin: upstream, https://github.com/monero/monero-core/commit/
+Origin: upstream, https://github.com/monero/monero-core/commit/db24a2e
 Last-Update: 2018-11-20
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
