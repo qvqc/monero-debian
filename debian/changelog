@@ -1,3 +1,9 @@
+monero (0.13.0.4-2) unstable; urgency=medium
+
+  * Add patches cherry-picked upstream to fix build on big-endian archs.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 20 Nov 2018 17:11:58 +0100
+
 monero (0.13.0.4-1) unstable; urgency=medium
 
   [ upstream ]

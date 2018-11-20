@@ -115,6 +115,11 @@ Files: Dockerfile
  debian/monero.install
  debian/monero.lintian-overrides
  debian/not-installed
+ debian/patches/020181025~db24a2e.patch
+ debian/patches/020181031~42d8d50.patch
+ debian/patches/020181031~b39fdf8.patch
+ debian/patches/020181031~f92682e.patch
+ debian/patches/020181102~2a48c2a.patch
  debian/patches/series
  debian/rules
  debian/source/format
