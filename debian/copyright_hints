@@ -133,6 +133,10 @@ Files: Dockerfile
  external/easylogging++/ea_config.h
  src/blocks/blockexports.c
  src/blocks/blocks.h
+ src/crypto/CryptonightR_JIT.c
+ src/crypto/CryptonightR_JIT.h
+ src/crypto/CryptonightR_template.S
+ src/crypto/CryptonightR_template.h
  src/crypto/chacha.c
  src/crypto/crypto_ops_builder/Makefile
  src/crypto/crypto_ops_builder/api.h
@@ -310,10 +314,12 @@ Files: Dockerfile
  src/crypto/skein.c
  src/crypto/skein.h
  src/crypto/variant2_int_sqrt.h
+ src/crypto/variant4_random_math.h
  src/version.cpp.in
  src/version.h
  src/wallet/api/common_defines.h
  tests/README.md
+ tests/block_weight/compare.py
  tests/crypto/tests.txt
  tests/difficulty/data.txt
  tests/gtest/CHANGES
@@ -328,6 +334,7 @@ Files: Dockerfile
  tests/hash/tests-fast.txt
  tests/hash/tests-slow-1.txt
  tests/hash/tests-slow-2.txt
+ tests/hash/tests-slow-4.txt
  tests/hash/tests-slow.txt
  tests/hash/tests-tree.txt
  tests/libwallet_api_tests/scripts/README.md
@@ -383,6 +390,7 @@ Files: CMakeLists.txt
  include/IWallet.h
  src/CMakeLists.txt
  src/blockchain_db/db_types.h
+ src/blockchain_db/testdb.h
  src/checkpoints/checkpoints.cpp
  src/checkpoints/checkpoints.h
  src/common/base58.cpp
@@ -831,9 +839,12 @@ Files: Makefile
  src/wallet/ringdb.h
  src/wallet/wallet_args.cpp
  src/wallet/wallet_args.h
+ tests/block_weight/CMakeLists.txt
+ tests/block_weight/block_weight.cpp
  tests/core_proxy/CMakeLists.txt
  tests/core_tests/CMakeLists.txt
  tests/crypto/CMakeLists.txt
+ tests/crypto/cnv4-jit.c
  tests/daemon_tests/CMakeLists.txt
  tests/difficulty/CMakeLists.txt
  tests/functional_tests/CMakeLists.txt
@@ -878,11 +889,13 @@ Files: Makefile
  tests/unit_tests/hashchain.cpp
  tests/unit_tests/http.cpp
  tests/unit_tests/keccak.cpp
+ tests/unit_tests/long_term_block_weight.cpp
  tests/unit_tests/memwipe.cpp
  tests/unit_tests/mlocker.cpp
  tests/unit_tests/mnemonics.cpp
  tests/unit_tests/multiexp.cpp
  tests/unit_tests/multisig.cpp
+ tests/unit_tests/notify.cpp
  tests/unit_tests/output_selection.cpp
  tests/unit_tests/random.cpp
  tests/unit_tests/ringdb.cpp
@@ -899,6 +912,7 @@ Copyright: 2014-2017, The Monero Project
   2017, The Monero Project
   2017-2018, The Monero Project
   2018, The Monero Project
+  2019, The Monero Project
 License: BSD-3-clause
  FIXME
 
@@ -1099,6 +1113,15 @@ Copyright: 2014-2018, The Monero Project
 License: BSD-3-clause and/or Expat
  FIXME
 
+Files: CMakeLists_IOS.txt
+ src/blockchain_utilities/README.md
+ tests/block_weight/block_weight.py
+Copyright: 2014-2018, The Monero Project
+  2017-2018, The Monero Project
+  2019, The Monero Project
+License: UNKNOWN
+ FIXME
+
 Files: contrib/epee/include/hmac-md5.h
  contrib/epee/include/md5global.h
 Copyright: 2001, 2005, - DINH Viet Hoa
@@ -1134,13 +1157,6 @@ License: GPL-3
 Files: cmake/FindBerkeleyDB.cmake
  cmake/FindLibunwind.cmake
 Copyright: 2006, Alexander Dymo, <adymo@kdevelop.org>
-License: UNKNOWN
- FIXME
-
-Files: CMakeLists_IOS.txt
- src/blockchain_utilities/README.md
-Copyright: 2014-2018, The Monero Project
-  2017-2018, The Monero Project
 License: UNKNOWN
  FIXME
 

@@ -1,3 +1,22 @@
+monero (0.14.0.0-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release.
+
+  [ Jonas Smedegaard ]
+  * Fix DEP3 patch headers.
+  * Update watch file:
+    + Generalize version mangling for repackaging.
+    + Simplify regular expressions.
+    + Rewrite usage comment.
+  * Update copyright info:
+    + Extend coverage for main upstream author.
+    + Extend coverage of packaging.
+  * Drop patches cherry-picked upstream now applied.
+  * Refresh patch 2001.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 24 Feb 2019 15:05:43 +0100
+
 monero (0.13.0.4-2) unstable; urgency=medium
 
   * Add patches cherry-picked upstream to fix build on big-endian archs.
