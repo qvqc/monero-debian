@@ -1,5 +1,9 @@
-# run "uscan --report" to check or "gpb import-orig --uscan" to update
 version=4
-opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%,dversionmangle=s/~dfsg\d*$//,repacksuffix=~dfsg" \
- https://github.com/monero-project/monero/tags \
- (?:.*?/)?v?@ANY_VERSION@@ARCHIVE_EXT@
+# check: uscan --report
+# update: gbp import-orig --upstream-vcs-tag=vX.Y.Z --uscan
+
+opts=\
+dversionmangle=s/[~+](dfsg|ds)\d*$//,repacksuffix=~dfsg,\
+filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/ \
+https://github.com/monero-project/monero/tags \
+.*?@ANY_VERSION@@ARCHIVE_EXT@
