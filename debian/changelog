@@ -1,7 +1,7 @@
-monero (0.14.0.0-1) unstable; urgency=medium
+monero (0.14.0.2-1~exp1) experimental; urgency=medium
 
   [ upstream ]
-  * New release.
+  * New release(s).
 
   [ Jonas Smedegaard ]
   * Fix DEP3 patch headers.
@@ -14,8 +14,9 @@ monero (0.14.0.0-1) unstable; urgency=medium
     + Extend coverage of packaging.
   * Drop patches cherry-picked upstream now applied.
   * Refresh patch 2001.
+  * Ignore testsuite failures when targeted experimental.
 
- -- Jonas Smedegaard <dr@jones.dk>  Sun, 24 Feb 2019 15:05:43 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 22 Mar 2019 17:58:51 +0100
 
 monero (0.13.0.4-2) unstable; urgency=medium
 
