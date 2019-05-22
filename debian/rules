@@ -2,6 +2,8 @@
 
 include /usr/share/dpkg/pkg-info.mk
 
+DH_OPTIONS = -O--buildsystem=cmake
+
 # detect if build targets experimental suite (or is a draft)
 DEB_SUITE_EXP = $(filter experimental% UNRELEASED,$(DEB_DISTRIBUTION))
 
@@ -30,4 +32,4 @@ override_dh_auto_clean:
 	dh_auto_clean
 
 %:
-	dh $@ --parallel --buildsystem=cmake
+	dh $@ --parallel $(DH_OPTIONS:-O%=%)
