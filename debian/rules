@@ -16,6 +16,9 @@ GTEST_FILTER = address_from_url.*:dns_resolver.*
 # skip slow tests
 TEST_EXCLUDE = core_tests
 
+# skip tests possibly broken
+TEST_EXCLUDE += $(if $(DEB_SUITE_EXP),,cnv4-jit block_weight)
+
 override_dh_auto_configure:
 	dh_auto_configure -- -DARCH=default -DNO_AES=ON -DBUILD_TESTS=ON
 
