@@ -1,3 +1,13 @@
+monero (0.14.0.2-1) unstable; urgency=medium
+
+  * Fix apply debhelper options also when overriding.
+  * Skip tests possibly broken:
+    + cnv4-jit (SEGFAULT)
+    + block_weight (BAD_COMMAND)
+  * Skip slow and broken tests in autopkgtests.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 23 May 2019 13:20:10 +0200
+
 monero (0.14.0.2-1~exp1) experimental; urgency=medium
 
   [ upstream ]
