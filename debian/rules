@@ -11,14 +11,18 @@ DEB_SUITE_EXP = $(filter experimental% UNRELEASED,$(DEB_DISTRIBUTION))
 FAKEHOME = $(CURDIR)/debian/fakehome
 
 # skip tests requiring network
-export GTEST_FILTER = address_from_url.*:dns_resolver.*
+GTEST_FILTER = address_from_url.*:dns_resolver.*
+
+# skip slow tests
+TEST_EXCLUDE = core_tests
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DARCH=default -DNO_AES=ON -DBUILD_TESTS=ON
 
 override_dh_auto_test:
 	HOME="${FAKEHOME}" \
-		dh_auto_test -- ARGS+="--output-on-failure -E core_tests" \
+	GTEST_FILTER="$(GTEST_FILTER)" \
+		dh_auto_test -- ARGS+="--output-on-failure -E '$(subst $() ,|,$(TEST_EXCLUDE))'" \
 		$(if $(DEB_SUITE_EXP),|| true)
 
 override_dh_install:
