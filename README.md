@@ -1,7 +1,27 @@
 # Monero
 
-Copyright (c) 2014-2018 The Monero Project.   
+Copyright (c) 2014-2019 The Monero Project.   
 Portions Copyright (c) 2012-2013 The Cryptonote developers.
+
+## Table of Contents
+
+  - [Development resources](#development-resources)
+  - [Vulnerability response](#vulnerability-response)
+  - [Research](#research)
+  - [Announcements](#announcements)
+  - [Translations](#translations)
+  - [Build](#build)
+    - [IMPORTANT](#important)
+  - [Coverage](#coverage)
+  - [Introduction](#introduction)
+  - [About this project](#about-this-project)
+  - [Supporting the project](#supporting-the-project)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Scheduled software upgrades](#scheduled-software-upgrades)
+  - [Release staging schedule and protocol](#release-staging-schedule-and-protocol)
+  - [Compiling Monero from source](#compiling-monero-from-source)
+    - [Dependencies](#dependencies)
 
 ## Development resources
 
@@ -16,13 +36,28 @@ Portions Copyright (c) 2012-2013 The Cryptonote developers.
 - Our [Vulnerability Response Process](https://github.com/monero-project/meta/blob/master/VULNERABILITY_RESPONSE_PROCESS.md) encourages responsible disclosure
 - We are also available via [HackerOne](https://hackerone.com/monero)
 
+## Research
+
+The [Monero Research Lab](https://src.getmonero.org/resources/research-lab/) is an open forum where the community coordinates research into Monero cryptography, protocols, fungibility, analysis, and more. We welcome collaboration and contributions from outside researchers! Because not all Lab work and publications are distributed as traditional preprints or articles, they may be easy to miss if you are conducting literature reviews for your own Monero research. You are encouraged to get in touch with our researchers if you have questions, wish to collaborate, or would like guidance to help avoid unnecessarily duplicating earlier or known work.
+
+Our researchers are available on IRC in [#monero-research-lab on Freenode](https://webchat.freenode.net/?randomnick=1&channels=%23monero-research-lab&prompt=1&uio=d4) or by email:
+
+- Sarang Noether, Ph.D.: [sarang@getmonero.org](mailto:sarang@getmonero.org) or [sarang.noether@protonmail.com](mailto:sarang.noether@protonmail.com); [research repository](https://github.com/SarangNoether/research-lab)
+- Surae Noether (Brandon Goodell), Ph.D.: [surae@getmonero.org](mailto:surae@getmonero.org) or [surae.noether@protonmail.com](mailto:surae.noether@protonmail.com); [research repository](https://github.com/b-g-goodell/research-lab)
+
 ## Announcements
 
 - You can subscribe to an [announcement listserv](https://lists.getmonero.org) to get critical announcements from the Monero core team. The announcement list can be very helpful for knowing when software updates are needed.
 
+## Translations
+The CLI wallet is available in different languages. If you want to help translate it, see our self-hosted localization platform, Pootle, on [translate.getmonero.org](https://translate.getmonero.org/projects/CLI/). Every translation *must* be uploaded on the platform, pull requests directly editing the code in this repository will be closed. If you need help with Pootle, you can find a guide with screenshots [here](https://github.com/monero-ecosystem/monero-translations/blob/master/pootle.md).
+&nbsp;
+
+If you need help/support/info about translations, contact the localization workgroup. You can find the complete list of contacts on the repository of the workgroup: [monero-translations](https://github.com/monero-ecosystem/monero-translations#contacts).
+
 ## Build
 
-### IMPORTANT 
+### IMPORTANT
 
 These builds are of the master branch, which is used for active development and can be either unstable or incompatible with release software. Please compile release branches.
 
@@ -32,9 +67,9 @@ These builds are of the master branch, which is used for active development and 
 | Ubuntu 16.04          |  amd64   | [![Ubuntu 16.04 amd64](https://build.getmonero.org/png?builder=monero-static-ubuntu-amd64)](https://build.getmonero.org/builders/monero-static-ubuntu-amd64)
 | Ubuntu 16.04          |  armv7   | [![Ubuntu 16.04 armv7](https://build.getmonero.org/png?builder=monero-static-ubuntu-arm7)](https://build.getmonero.org/builders/monero-static-ubuntu-arm7)
 | Debian Stable         |  armv8   | [![Debian armv8](https://build.getmonero.org/png?builder=monero-static-debian-armv8)](https://build.getmonero.org/builders/monero-static-debian-armv8)
-| OSX 10.10             |  amd64   | [![OSX 10.10 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.10)](https://build.getmonero.org/builders/monero-static-osx-10.10)
-| OSX 10.11             |  amd64   | [![OSX 10.11 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.11)](https://build.getmonero.org/builders/monero-static-osx-10.11)
-| OSX 10.12             |  amd64   | [![OSX 10.12 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.12)](https://build.getmonero.org/builders/monero-static-osx-10.12)
+| macOS 10.11             |  amd64   | [![macOS 10.11 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.11)](https://build.getmonero.org/builders/monero-static-osx-10.11)
+| macOS 10.12             |  amd64   | [![macOS 10.12 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.12)](https://build.getmonero.org/builders/monero-static-osx-10.12)
+| macOS 10.13             |  amd64   | [![macOS 10.13 amd64](https://build.getmonero.org/png?builder=monero-static-osx-10.13)](https://build.getmonero.org/builders/monero-static-osx-10.13)
 | FreeBSD 11            |  amd64   | [![FreeBSD 11 amd64](https://build.getmonero.org/png?builder=monero-static-freebsd64)](https://build.getmonero.org/builders/monero-static-freebsd64)
 | DragonFly BSD 4.6     |  amd64   | [![DragonFly BSD amd64](https://build.getmonero.org/png?builder=monero-static-dragonflybsd-amd64)](https://build.getmonero.org/builders/monero-static-dragonflybsd-amd64)
 | Windows (MSYS2/MinGW) |  i686    | [![Windows (MSYS2/MinGW) i686](https://build.getmonero.org/png?builder=monero-static-win32)](https://build.getmonero.org/builders/monero-static-win32)
@@ -57,6 +92,8 @@ Monero is a private, secure, untraceable, decentralised digital currency. You ar
 **Security:** Using the power of a distributed peer-to-peer consensus network, every transaction on the network is cryptographically secured. Individual wallets have a 25 word mnemonic seed that is only displayed once, and can be written down to backup the wallet. Wallet files are encrypted with a passphrase to ensure they are useless if stolen.
 
 **Untraceability:** By taking advantage of ring signatures, a special property of a certain type of cryptography, Monero is able to ensure that transactions are not only untraceable, but have an optional measure of ambiguity that ensures that transactions cannot easily be tied back to an individual user or computer.
+
+**Decentralization:** The utility of monero depends on its decentralised peer-to-peer consensus network - anyone should be able to run the monero software, validate the integrity of the blockchain, and participate in all aspects of the monero network using consumer-grade commodity hardware. Decentralization of the monero network is maintained by software development that minimizes the costs of running the monero software and inhibits the proliferation of specialized, non-commodity hardware.  
 
 ## About this project
 
@@ -97,10 +134,10 @@ If you want to help out, see [CONTRIBUTING](CONTRIBUTING.md) for a set of guidel
 ## Scheduled software upgrades
 
 Monero uses a fixed-schedule software upgrade (hard fork) mechanism to implement new features. This means that users of Monero (end users and service providers) should run current versions and upgrade their software on a regular schedule. Software upgrades occur during the months of April and October. The required software for these upgrades will be available prior to the scheduled date. Please check the repository prior to this date for the proper Monero software version. Below is the historical schedule and the projected schedule for the next upgrade.
-Dates are provided in the format YYYY-MM-DD. 
+Dates are provided in the format YYYY-MM-DD.
 
 
-| Software upgrade block height | Date       | Fork version | Minimum Monero version | Recommended Monero version | Details                                                                            |  
+| Software upgrade block height  | Date       | Fork version      | Minimum Monero version | Recommended Monero version | Details                                                                            |  
 | ------------------------------ | -----------| ----------------- | ---------------------- | -------------------------- | ---------------------------------------------------------------------------------- |
 | 1009827                        | 2016-03-22 | v2                | v0.9.4                 | v0.9.4                     | Allow only >= ringsize 3, blocktime = 120 seconds, fee-free blocksize 60 kb       |
 | 1141317                        | 2016-09-21 | v3                | v0.9.4                 | v0.10.0                    | Splits coinbase into denominations  |
@@ -108,16 +145,17 @@ Dates are provided in the format YYYY-MM-DD.
 | 1288616                        | 2017-04-15 | v5                | v0.10.3.0              | v0.10.3.1                  | Adjusted minimum blocksize and fee algorithm      |
 | 1400000                        | 2017-09-16 | v6                | v0.11.0.0              | v0.11.0.0                  | Allow only RingCT transactions, allow only >= ringsize 5      |
 | 1546000                        | 2018-04-06 | v7                | v0.12.0.0              | v0.12.3.0                  | Cryptonight variant 1, ringsize >= 7, sorted inputs
-| 1685555                        | 2018-10-18 | v8                | v0.13.0.0              | v0.13.0.0                  | max transaction size at half the penalty free block size, bulletproofs enabled, cryptonight variant 2, fixed ringsize [11](https://youtu.be/KOO5S4vxi0o)
-| 1686275                        | 2018-10-19 | v9                | v0.13.0.0              | v0.13.0.0                  | bulletproofs required
-| 1788000                        | 2019-03-09 | v10               | v0.14.0.0              | v0.14.0.0                  | New PoW based on Cryptonight-R, new block weight algorithm, slightly more efficient RingCT format
-| 1788720                        | 2019-03-10 | v11               | v0.14.0.0              | v0.14.0.0                  | forbid old RingCT transaction format
+| 1685555                        | 2018-10-18 | v8                | v0.13.0.0              | v0.13.0.4                  | max transaction size at half the penalty free block size, bulletproofs enabled, cryptonight variant 2, fixed ringsize [11](https://youtu.be/KOO5S4vxi0o)
+| 1686275                        | 2018-10-19 | v9                | v0.13.0.0              | v0.13.0.4                  | bulletproofs required
+| 1788000                        | 2019-03-09 | v10               | v0.14.0.0              | v0.14.1.0                  | New PoW based on Cryptonight-R, new block weight algorithm, slightly more efficient RingCT format
+| 1788720                        | 2019-03-10 | v11               | v0.14.0.0              | v0.14.1.0                  | forbid old RingCT transaction format
+| XXXXXXX                        | 2019-10-XX | XX                | XXXXXXXXX              | XXXXXXXXX                  | X
 
 X's indicate that these details have not been determined as of commit date.
 
 ## Release staging schedule and protocol
 
-Approximately three months prior to a scheduled software upgrade, a branch from Master will be created with the new release version tag. Pull requests that address bugs should then be made to both Master and the new release branch. Pull requests that require extensive review and testing (generally, optimizations and new features) should *not* be made to the release branch. 
+Approximately three months prior to a scheduled software upgrade, a branch from Master will be created with the new release version tag. Pull requests that address bugs should then be made to both Master and the new release branch. Pull requests that require extensive review and testing (generally, optimizations and new features) should *not* be made to the release branch.
 
 ## Compiling Monero from source
 
@@ -141,6 +179,7 @@ library archives (`.a`).
 | OpenSSL      | basically any | NO       | `libssl-dev`       | `openssl`    | `openssl-devel`   | NO       | sha256 sum     |
 | libzmq       | 3.0.0         | NO       | `libzmq3-dev`      | `zeromq`     | `cppzmq-devel`    | NO       | ZeroMQ library |
 | OpenPGM      | ?             | NO       | `libpgm-dev`       | `libpgm`     | `openpgm-devel`   | NO       | For ZeroMQ     |
+| libnorm[2]   | ?             | NO       | `libnorm-dev`      |              |               `   | YES      | For ZeroMQ     |
 | libunbound   | 1.4.16        | YES      | `libunbound-dev`   | `unbound`    | `unbound-devel`   | NO       | DNS resolver   |
 | libsodium    | ?             | NO       | `libsodium-dev`    | `libsodium`  | `libsodium-devel` | NO       | cryptography   |
 | libunwind    | any           | NO       | `libunwind8-dev`   | `libunwind`  | `libunwind-devel` | YES      | Stack traces   |
@@ -148,16 +187,24 @@ library archives (`.a`).
 | libreadline  | 6.3.0         | NO       | `libreadline6-dev` | `readline`   | `readline-devel`  | YES      | Input editing  |
 | ldns         | 1.6.17        | NO       | `libldns-dev`      | `ldns`       | `ldns-devel`      | YES      | SSL toolkit    |
 | expat        | 1.1           | NO       | `libexpat1-dev`    | `expat`      | `expat-devel`     | YES      | XML parsing    |
-| GTest        | 1.5           | YES      | `libgtest-dev`^    | `gtest`      | `gtest-devel`     | YES      | Test suite     |
+| GTest        | 1.5           | YES      | `libgtest-dev`[1]  | `gtest`      | `gtest-devel`     | YES      | Test suite     |
 | Doxygen      | any           | NO       | `doxygen`          | `doxygen`    | `doxygen`         | YES      | Documentation  |
 | Graphviz     | any           | NO       | `graphviz`         | `graphviz`   | `graphviz`        | YES      | Documentation  |
 
 
-[^] On Debian/Ubuntu `libgtest-dev` only includes sources and headers. You must
+[1] On Debian/Ubuntu `libgtest-dev` only includes sources and headers. You must
 build the library binary manually. This can be done with the following command ```sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake . && sudo make && sudo mv libg* /usr/lib/ ```
+[2] libnorm-dev is needed if your zmq library was built with libnorm, and not needed otherwise
 
-Debian / Ubuntu one liner for all dependencies  
+Install all dependencies at once on Debian/Ubuntu:
+
 ``` sudo apt update && sudo apt install build-essential cmake pkg-config libboost-all-dev libssl-dev libzmq3-dev libunbound-dev libsodium-dev libunwind8-dev liblzma-dev libreadline6-dev libldns-dev libexpat1-dev doxygen graphviz libpgm-dev```
+
+Install all dependencies at once on macOS with the provided Brewfile:
+``` brew update && brew bundle --file=contrib/brew/Brewfile ```
+
+FreeBSD one liner for required to build dependencies
+```pkg install git gmake cmake pkgconf boost-libs cppzmq libsodium```
 
 ### Cloning the repository
 
@@ -174,28 +221,30 @@ If you already have a repo cloned, initialize and update:
 Monero uses the CMake build system and a top-level [Makefile](Makefile) that
 invokes cmake commands as needed.
 
-#### On Linux and OS X
+#### On Linux and macOS
 
 * Install the dependencies
 * Change to the root of the source code directory, change to the most recent release branch, and build:
 
-        cd monero
-        git checkout v0.14.0.1
-        make
+    ```bash
+    cd monero
+    git checkout release-v0.14
+    make
+    ```
 
     *Optional*: If your machine has several cores and enough memory, enable
     parallel build by running `make -j<number of threads>` instead of `make`. For
     this to be worthwhile, the machine should have one core and about 2GB of RAM
     available per thread.
 
-    *Note*: If cmake can not find zmq.hpp file on OS X, installing `zmq.hpp` from
+    *Note*: If cmake can not find zmq.hpp file on macOS, installing `zmq.hpp` from
     https://github.com/zeromq/cppzmq to `/usr/local/include` should fix that error.
-    
+
     *Note*: The instructions above will compile the most stable release of the
     Monero software. If you would like to use and test the most recent software,
     use ```git checkout master```. The master branch may contain updates that are
-    both unstable and incompatible with release software, though testing is always 
-    encouraged. 
+    both unstable and incompatible with release software, though testing is always
+    encouraged.
 
 * The resulting executables can be found in `build/release/bin`
 
@@ -205,49 +254,65 @@ invokes cmake commands as needed.
 
 * **Optional**: build and run the test suite to verify the binaries:
 
-        make release-test
+    ```bash
+    make release-test
+    ```
 
     *NOTE*: `core_tests` test may take a few hours to complete.
 
 * **Optional**: to build binaries suitable for debugging:
 
-         make debug
+    ```bash
+    make debug
+    ```
 
 * **Optional**: to build statically-linked binaries:
 
-         make release-static
+    ```bash
+    make release-static
+    ```
 
 Dependencies need to be built with -fPIC. Static libraries usually aren't, so you may have to build them yourself with -fPIC. Refer to their documentation for how to build them.
 
 * **Optional**: build documentation in `doc/html` (omit `HAVE_DOT=YES` if `graphviz` is not installed):
 
-        HAVE_DOT=YES doxygen Doxyfile
+    ```bash
+    HAVE_DOT=YES doxygen Doxyfile
+    ```
 
 #### On the Raspberry Pi
 
-Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-09-07 or later) from https://www.raspberrypi.org/downloads/raspbian/. If you are using Raspian Jessie, [please see note in the following section](#note-for-raspbian-jessie-users). 
+Tested on a Raspberry Pi Zero with a clean install of minimal Raspbian Stretch (2017-09-07 or later) from https://www.raspberrypi.org/downloads/raspbian/. If you are using Raspian Jessie, [please see note in the following section](#note-for-raspbian-jessie-users).
 
 * `apt-get update && apt-get upgrade` to install all of the latest software
 
 * Install the dependencies for Monero from the 'Debian' column in the table above.
 
 * Increase the system swap size:
-```	
-	sudo /etc/init.d/dphys-swapfile stop  
-	sudo nano /etc/dphys-swapfile  
-	CONF_SWAPSIZE=1024  
-	sudo /etc/init.d/dphys-swapfile start  
-```
-* Clone monero and checkout most recent release version:
-```
-        git clone https://github.com/monero-project/monero.git
-	cd monero
-	git checkout tags/v0.14.0.1
-```
+
+    ```bash
+    sudo /etc/init.d/dphys-swapfile stop  
+    sudo nano /etc/dphys-swapfile  
+    CONF_SWAPSIZE=2048
+    sudo /etc/init.d/dphys-swapfile start
+    ```
+
+* If using an external hard disk without an external power supply, ensure it gets enough power to avoid hardware issues when syncing, by adding the line "max_usb_current=1" to /boot/config.txt
+
+* Clone monero and checkout the most recent release version:
+
+    ```bash
+    git clone https://github.com/monero-project/monero.git
+    cd monero
+    git checkout tags/v0.14.1.0
+    ```
+
 * Build:
-```
-        make release
-```
+
+    ```bash
+    make release
+    ```
+
 * Wait 4-6 hours
 
 * The resulting executables can be found in `build/release/bin`
@@ -264,28 +329,33 @@ If you are using the older Raspbian Jessie image, compiling Monero is a bit more
 
 * As before, `apt-get update && apt-get upgrade` to install all of the latest software, and increase the system swap size
 
-```	
-	sudo /etc/init.d/dphys-swapfile stop  
-	sudo nano /etc/dphys-swapfile  
-	CONF_SWAPSIZE=1024  
-	sudo /etc/init.d/dphys-swapfile start  
-```
+    ```bash
+    sudo /etc/init.d/dphys-swapfile stop
+    sudo nano /etc/dphys-swapfile
+    CONF_SWAPSIZE=2048
+    sudo /etc/init.d/dphys-swapfile start
+    ```
+
 
 * Then, install the dependencies for Monero except `libunwind` and `libboost-all-dev`
 
 * Install the latest version of boost (this may first require invoking `apt-get remove --purge libboost*` to remove a previous version if you're not using a clean install):
-```
-	cd  
-	wget https://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2  
-	tar xvfo boost_1_64_0.tar.bz2  
-	cd boost_1_64_0  
-	./bootstrap.sh  
-	sudo ./b2  
-```
+
+    ```bash
+    cd
+    wget https://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2
+    tar xvfo boost_1_64_0.tar.bz2
+    cd boost_1_64_0
+    ./bootstrap.sh
+    sudo ./b2
+    ```
+
 * Wait ~8 hours
-```
-	sudo ./bjam cxxflags=-fPIC cflags=-fPIC -a install
-```
+
+    ```bash    
+    sudo ./bjam cxxflags=-fPIC cflags=-fPIC -a install
+    ```
+
 * Wait ~4 hours
 
 * From here, follow the [general Raspberry Pi instructions](#on-the-raspberry-pi) from the "Clone monero and checkout most recent release version" step.
@@ -304,24 +374,32 @@ application.
 * Open the MSYS shell via the `MSYS2 Shell` shortcut
 * Update packages using pacman:  
 
-        pacman -Syuu  
+    ```bash
+    pacman -Syu
+    ```
 
 * Exit the MSYS shell using Alt+F4  
 * Edit the properties for the `MSYS2 Shell` shortcut changing "msys2_shell.bat" to "msys2_shell.cmd -mingw64" for 64-bit builds or "msys2_shell.cmd -mingw32" for 32-bit builds
 * Restart MSYS shell via modified shortcut and update packages again using pacman:  
 
-        pacman -Syuu  
+    ```bash
+    pacman -Syu
+    ```
 
 
 * Install dependencies:
 
     To build for 64-bit Windows:
 
-        pacman -S mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-openssl mingw-w64-x86_64-zeromq mingw-w64-x86_64-libsodium mingw-w64-x86_64-hidapi
+    ```bash
+    pacman -S mingw-w64-x86_64-toolchain make mingw-w64-x86_64-cmake mingw-w64-x86_64-boost mingw-w64-x86_64-openssl mingw-w64-x86_64-zeromq mingw-w64-x86_64-libsodium mingw-w64-x86_64-hidapi
+    ```
 
     To build for 32-bit Windows:
- 
-        pacman -S mingw-w64-i686-toolchain make mingw-w64-i686-cmake mingw-w64-i686-boost mingw-w64-i686-openssl mingw-w64-i686-zeromq mingw-w64-i686-libsodium mingw-w64-i686-hidapi
+
+    ```bash
+    pacman -S mingw-w64-i686-toolchain make mingw-w64-i686-cmake mingw-w64-i686-boost mingw-w64-i686-openssl mingw-w64-i686-zeromq mingw-w64-i686-libsodium mingw-w64-i686-hidapi
+    ```
 
 * Open the MingW shell via `MinGW-w64-Win64 Shell` shortcut on 64-bit Windows
   or `MinGW-w64-Win64 Shell` shortcut on 32-bit Windows. Note that if you are
@@ -331,41 +409,55 @@ application.
 
 * To git clone, run:
 
-        git clone --recursive https://github.com/monero-project/monero.git
+    ```bash
+    git clone --recursive https://github.com/monero-project/monero.git
+    ```
 
 **Building**
 
 * Change to the cloned directory, run:
-	
-        cd monero
 
-* If you would like a specific [version/tag](https://github.com/monero-project/monero/tags), do a git checkout for that version. eg. 'v0.14.0.1'. If you dont care about the version and just want binaries from master, skip this step:
+    ```bash
+    cd monero
+    ```
+
+* If you would like a specific [version/tag](https://github.com/monero-project/monero/tags), do a git checkout for that version. eg. 'v0.14.1.0'. If you don't care about the version and just want binaries from master, skip this step:
 	
-        git checkout v0.14.0.1
+    ```bash
+    git checkout v0.14.1.0
+    ```
 
 * If you are on a 64-bit system, run:
 
-        make release-static-win64
+    ```bash
+    make release-static-win64
+    ```
 
 * If you are on a 32-bit system, run:
 
-        make release-static-win32
+    ```bash
+    make release-static-win32
+    ```
 
 * The resulting executables can be found in `build/release/bin`
 
 * **Optional**: to build Windows binaries suitable for debugging on a 64-bit system, run:
 
-        make debug-static-win64
-	
+    ```bash
+    make debug-static-win64
+    ```
+
 * **Optional**: to build Windows binaries suitable for debugging on a 32-bit system, run:
 
-        make debug-static-win32
+    ```bash
+    make debug-static-win32
+    ```
 
 * The resulting executables can be found in `build/debug/bin`
 
 ### On FreeBSD:
 
-The project can be built from scratch by following instructions for Linux above. If you are running monero in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
+The project can be built from scratch by following instructions for Linux above(but use `gmake` instead of `make`). If you are running monero in a jail you need to add the flag: `allow.sysvipc=1` to your jail configuration, otherwise lmdb will throw the error message: `Failed to open lmdb environment: Function not implemented`.
 
 We expect to add Monero into the ports tree in the near future, which will aid in managing installations using ports or packages.
 
@@ -386,7 +478,7 @@ You will have to add the serialization, date_time, and regex modules to Boost wh
 
 To build: `env CC=egcc CXX=eg++ CPP=ecpp DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/path/to/the/boost/you/built make release-static-64`
 
-#### OpenBSD >= 6.2
+#### OpenBSD 6.2 and 6.3
 
 You will need to add a few packages to your system. `pkg_add cmake zeromq libiconv`.
 
@@ -399,13 +491,13 @@ We assume you are compiling with a non-root user and you have `doas` enabled.
 
 Note: do not use the boost package provided by OpenBSD, as we are installing boost to `/usr/local`.
 
-```
+```bash
 # Create boost building directory
 mkdir ~/boost
 cd ~/boost
 
 # Fetch boost source
-ftp -o boost_1_64_0.tar.bz2 https://netcologne.dl.sourceforge.net/project/boost/boost/1.64.0/boost_1_64_0.tar.bz2 
+ftp -o boost_1_64_0.tar.bz2 https://netcologne.dl.sourceforge.net/project/boost/boost/1.64.0/boost_1_64_0.tar.bz2
 
 # MUST output: (SHA256) boost_1_64_0.tar.bz2: OK
 echo "7bcc5caace97baa948931d712ea5f37038dbb1c5d89b43ad4def4ed7cb683332 boost_1_64_0.tar.bz2" | sha256 -c
@@ -431,13 +523,11 @@ echo 'using clang : : c++ : <cxxflags>"-fvisibility=hidden -fPIC" <linkflags>"" 
 doas ./b2 -d0 runtime-link=shared threadapi=pthread threading=multi link=static variant=release --layout=tagged --build-type=complete --user-config=user-config.jam -sNO_BZIP2=1 -sICONV_PATH=/usr/local --prefix=/usr/local install
 ```
 
-Build cppzmq
-
 Build the cppzmq bindings.
 
 We assume you are compiling with a non-root user and you have `doas` enabled.
 
-```
+```bash
 # Create cppzmq building directory
 mkdir ~/cppzmq
 cd ~/cppzmq
@@ -457,31 +547,55 @@ cmake ..
 doas make install
 ```
 
-Build monero: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static`
+Build monero:
+```bash
+env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local make release-static
+```
+
+#### OpenBSD >= 6.4
+
+You will need to add a few packages to your system. `pkg_add cmake gmake zeromq cppzmq libiconv boost`.
+
+The doxygen and graphviz packages are optional and require the xbase set.
+
+Build monero: `env DEVELOPER_LOCAL_TOOLS=1 BOOST_ROOT=/usr/local gmake release-static`
+
+Note: you may encounter the following error, when compiling the latest version of monero as a normal user:
+
+```
+LLVM ERROR: out of memory
+c++: error: unable to execute command: Abort trap (core dumped)
+```
+
+Then you need to increase the data ulimit size to 2GB and try again: `ulimit -d 2000000`
 
 ### On Solaris:
 
 The default Solaris linker can't be used, you have to install GNU ld, then run cmake manually with the path to your copy of GNU ld:
 
-        mkdir -p build/release
-        cd build/release
-        cmake -DCMAKE_LINKER=/path/to/ld -D CMAKE_BUILD_TYPE=Release ../..
-        cd ../..
+```bash
+mkdir -p build/release
+cd build/release
+cmake -DCMAKE_LINKER=/path/to/ld -D CMAKE_BUILD_TYPE=Release ../..
+cd ../..
+```
 
 Then you can run make as usual.
 
 ### On Linux for Android (using docker):
 
-        # Build image (for ARM 32-bit)
-        docker build -f utils/build_scripts/android32.Dockerfile -t monero-android .
-        # Build image (for ARM 64-bit)
-        docker build -f utils/build_scripts/android64.Dockerfile -t monero-android .
-        # Create container
-        docker create -it --name monero-android monero-android bash
-        # Get binaries
-        docker cp monero-android:/src/build/release/bin .
+```bash
+# Build image (for ARM 32-bit)
+docker build -f utils/build_scripts/android32.Dockerfile -t monero-android .
+# Build image (for ARM 64-bit)
+docker build -f utils/build_scripts/android64.Dockerfile -t monero-android .
+# Create container
+docker create -it --name monero-android monero-android bash
+# Get binaries
+docker cp monero-android:/src/build/release/bin .
+```
 
-### Building portable statically linked binaries (Cross Compiling)
+### Building portable statically linked binaries
 
 By default, in either dynamically or statically linked builds, binaries target the specific host processor on which the build happens and are not portable to other processors. Portable binaries can be built using the following targets:
 
@@ -493,6 +607,30 @@ By default, in either dynamically or statically linked builds, binaries target t
 * ```make release-static-win64``` builds binaries on 64-bit Windows portable across 64-bit Windows systems
 * ```make release-static-win32``` builds binaries on 64-bit or 32-bit Windows portable across 32-bit Windows systems
 
+### Cross Compiling
+
+You can also cross-compile static binaries on Linux for Windows and macOS with the `depends` system.
+
+* ```make depends target=x86_64-linux-gnu``` for 64-bit linux binaries.
+* ```make depends target=x86_64-w64-mingw32``` for 64-bit windows binaries.
+  * Requires: `python3 g++-mingw-w64-x86-64 wine1.6 bc`
+* ```make depends target=x86_64-apple-darwin11``` for macOS binaries.
+  * Requires: `cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev`
+* ```make depends target=i686-linux-gnu``` for 32-bit linux binaries.
+  * Requires: `g++-multilib bc`
+* ```make depends target=i686-w64-mingw32``` for 32-bit windows binaries.
+  * Requires: `python3 g++-mingw-w64-i686`
+* ```make depends target=arm-linux-gnueabihf``` for armv7 binaries.
+  * Requires: `g++-arm-linux-gnueabihf`
+* ```make depends target=aarch64-linux-gnu``` for armv8 binaries.
+  * Requires: `g++-aarch64-linux-gnu`
+
+The required packages are the names for each toolchain on apt. Depending on your distro, they may have different names.
+
+Using `depends` might also be easier to compile Monero on Windows than using MSYS. Activate Windows Subsystem for Linux (WSL) with a distro (for example Ubuntu), install the apt build-essentials and follow the `depends` steps as depicted above.
+
+The produced binaries still link libc dynamically. If the binary is compiled on a current distribution, it might not run on an older distribution with an older installation of libc. Passing `-DBACKCOMPAT=ON` to cmake will make sure that the binary will run on systems having at least libc version 2.17.
+
 ## Installing Monero from a package
 
 **DISCLAIMER: These packages are not part of this repository or maintained by this project's contributors, and as such, do not go through the same review process to ensure their trustworthiness and security.**
@@ -501,7 +639,9 @@ Packages are available for
 
 * Ubuntu and [snap supported](https://snapcraft.io/docs/core/install) systems, via a community contributed build.
 
-	snap install monero --beta
+    ```bash
+    snap install monero --beta
+    ```
 
 Installing a snap is very quick. Snaps are secure. They are isolated with all of their dependencies. Snaps also auto update when a new version is released.
 
@@ -511,46 +651,36 @@ Installing a snap is very quick. Snaps are secure. They are isolated with all of
 
 * Void Linux:
 
-        xbps-install -S monero
+    ```bash
+    xbps-install -S monero
+    ```
 
 * GuixSD
 
-        guix package -i monero
+    ```bash
+    guix package -i monero
+    ```
 
 * Docker
 
-        # Build using all available cores
-        docker build -t monero .
-
-        # or build using a specific number of cores (reduce RAM requirement)
-        docker build --build-arg NPROC=1 -t monero .
-
-        # either run in foreground
-        docker run -it -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
-
-        # or in background
-        docker run -it -d -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
+    ```bash
+    # Build using all available cores
+    docker build -t monero .
+    
+    # or build using a specific number of cores (reduce RAM requirement)
+    docker build --build-arg NPROC=1 -t monero .
+    
+    # either run in foreground
+    docker run -it -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
+    
+    # or in background
+    docker run -it -d -v /monero/chain:/root/.bitmonero -v /monero/wallet:/wallet -p 18080:18080 monero
+    ```
 
 * The build needs 3 GB space.
 * Wait one  hour or more
 
 Packaging for your favorite distribution would be a welcome contribution!
-
-You can also cross-compile binaries on linux for windows and macos with the depends system. Go to contrib/depends and type:
-
-* ```make HOST=x86_64-linux-gnu``` for 64-bit linux binaries.
-* ```make HOST=x86_64-w64-mingw32``` for 64-bit windows binaries. Requires: python3 nsis g++-mingw-w64-x86-64 wine1.6 bc
-* ```make HOST=x86_64-apple-darwin11``` for darwin binaries. Requires: cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev
-* ```make HOST=i686-linux-gnu``` for 32-bit linux binaries. Requires: g++-multilib bc
-* ```make HOST=i686-w64-mingw32``` for 32-bit windows binaries. Requires: python3 nsis g++-mingw-w64-i686
-* ```make HOST=arm-linux-gnueabihf``` for armv6 binaries. Requires: g++-arm-linux-gnueabihf
-
-The required packages are the names for each toolchain on apt. Depending on your distro, they may have different names.
-Then go back to the source dir and type for example for windows 64bit: 
-
-* ```cmake -DCMAKE_TOOLCHAIN_FILE=`pwd`/contrib/depends/x86_64-w64-mingw32```
-
-Using depends might also be easier to compile monero on windows than using msys. Activate windows subsystem for linux (for example ubuntu) install the apt build-essentials and follow the depends steps as depicted above.
 
 ## Running monerod
 
@@ -558,7 +688,9 @@ The build places the binary in `bin/` sub-directory within the build directory
 from which cmake was invoked (repository root by default). To run in
 foreground:
 
-    ./bin/monerod
+```bash
+./bin/monerod
+```
 
 To list all available options, run `./bin/monerod --help`.  Options can be
 specified either on the command line or in a configuration file passed by the
@@ -568,7 +700,9 @@ of the argument without the leading dashes, for example `log-level=1`.
 
 To run in background:
 
-    ./bin/monerod --log-file monerod.log --detach
+```bash
+./bin/monerod --log-file monerod.log --detach
+```
 
 To run as a systemd service, copy
 [monerod.service](utils/systemd/monerod.service) to `/etc/systemd/system/` and
@@ -585,6 +719,12 @@ monero-wallet-cli, and possibly monerod, if you get crashes refreshing.
 See [README.i18n.md](README.i18n.md).
 
 ## Using Tor
+
+> There is a new, still experimental, [integration with Tor](ANONYMITY_NETWORKS.md). The
+> feature allows connecting over IPv4 and Tor simulatenously - IPv4 is used for
+> relaying blocks and relaying transactions received by peers whereas Tor is
+> used solely for relaying transactions received over local RPC. This provides
+> privacy and better protection against surrounding node (sybil) attacks.
 
 While Monero isn't made to integrate with Tor, it can be used wrapped with torsocks, by
 setting the following configuration parameters and environment variables:
@@ -610,7 +750,9 @@ setting the following configuration parameters and environment variables:
 
 Example command line to start monerod through Tor:
 
-    DNS_PUBLIC=tcp torsocks monerod --p2p-bind-ip 127.0.0.1 --no-igd
+```bash
+DNS_PUBLIC=tcp torsocks monerod --p2p-bind-ip 127.0.0.1 --no-igd
+```
 
 ### Using Tor on Tails
 
@@ -618,26 +760,28 @@ TAILS ships with a very restrictive set of firewall rules. Therefore, you need
 to add a rule to allow this connection too, in addition to telling torsocks to
 allow inbound connections. Full example:
 
-    sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT
-    DNS_PUBLIC=tcp torsocks ./monerod --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
-        --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
+```bash
+sudo iptables -I OUTPUT 2 -p tcp -d 127.0.0.1 -m tcp --dport 18081 -j ACCEPT
+DNS_PUBLIC=tcp torsocks ./monerod --p2p-bind-ip 127.0.0.1 --no-igd --rpc-bind-ip 127.0.0.1 \
+    --data-dir /home/amnesia/Persistent/your/directory/to/the/blockchain
+```
 
 ## Debugging
 
-This section contains general instructions for debugging failed installs or problems encountered with Monero. First ensure you are running the latest version built from the Github repo.
+This section contains general instructions for debugging failed installs or problems encountered with Monero. First, ensure you are running the latest version built from the Github repo.
 
 ### Obtaining stack traces and core dumps on Unix systems
 
 We generally use the tool `gdb` (GNU debugger) to provide stack trace functionality, and `ulimit` to provide core dumps in builds which crash or segfault.
 
-* To use gdb in order to obtain a stack trace for a build that has stalled:
+* To use `gdb` in order to obtain a stack trace for a build that has stalled:
 
 Run the build.
 
 Once it stalls, enter the following command:
 
-```
-gdb /path/to/monerod `pidof monerod` 
+```bash
+gdb /path/to/monerod `pidof monerod`
 ```
 
 Type `thread apply all bt` within gdb in order to obtain the stack trace
@@ -654,11 +798,13 @@ When it terminates with an output along the lines of "Segmentation fault (core d
 
 You can now analyse this core dump with `gdb` as follows:
 
-`gdb /path/to/monerod /path/to/dumpfile`
+```bash
+gdb /path/to/monerod /path/to/dumpfile`
+```
 
 Print the stack trace with `bt`
 
-* To run monero within gdb:
+#### To run monero within gdb:
 
 Type `gdb /path/to/monerod`
 
@@ -670,15 +816,17 @@ Type `run` to run monerod
 
 There are two tools available:
 
-* ASAN
+#### ASAN
 
 Configure Monero with the -D SANITIZE=ON cmake flag, eg:
 
-    cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
+```bash
+cd build/debug && cmake -D SANITIZE=ON -D CMAKE_BUILD_TYPE=Debug ../..
+```
 
 You can then run the monero tools normally. Performance will typically halve.
 
-* valgrind
+#### valgrind
 
 Install valgrind and run as `valgrind /path/to/monerod`. It will be very slow.
 
@@ -688,7 +836,9 @@ Instructions for debugging suspected blockchain corruption as per @HYC
 
 There is an `mdb_stat` command in the LMDB source that can print statistics about the database but it's not routinely built. This can be built with the following command:
 
-`cd ~/monero/external/db_drivers/liblmdb && make`
+```bash
+cd ~/monero/external/db_drivers/liblmdb && make
+```
 
 The output of `mdb_stat -ea <path to blockchain dir>` will indicate inconsistencies in the blocks, block_heights and block_info table.
 
