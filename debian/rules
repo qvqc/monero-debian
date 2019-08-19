@@ -2,6 +2,18 @@
 
 include /usr/share/dpkg/pkg-info.mk
 
+# reduce debugging information on 32bit archs
+# to avoid some FTBFS (memory axhaustion of build environment?)
+ifeq ($(DEB_HOST_ARCH_BITS),32)
+export DEB_CXXFLAGS_MAINT_APPEND = -g1
+endif
+
+# explicitly link with libatomic
+# to work around gcc bug <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=81358>
+ifneq (,$(filter $(DEB_HOST_ARCH), armel m68k mips mipsel powerpc powerpcspe sh4))
+export DEB_LDFLAGS_MAINT_APPEND = -latomic
+endif
+
 DH_OPTIONS = -O--buildsystem=cmake
 
 # detect if build targets experimental suite (or is a draft)
