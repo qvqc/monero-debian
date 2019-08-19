@@ -31,9 +31,9 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
 --- a/src/p2p/net_node.inl
 +++ b/src/p2p/net_node.inl
-@@ -49,9 +49,9 @@
- #include "storages/levin_abstract_invoke2.h"
+@@ -60,9 +60,9 @@
  #include "cryptonote_core/cryptonote_core.h"
+ #include "net/parse.h"
  
 -#include <miniupnp/miniupnpc/miniupnpc.h>
 -#include <miniupnp/miniupnpc/upnpcommands.h>
@@ -46,7 +46,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #define MONERO_DEFAULT_LOG_CATEGORY "net.p2p"
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -279,6 +279,8 @@
+@@ -285,6 +285,8 @@
  # elseif(CMAKE_SYSTEM_NAME MATCHES ".*BSDI.*")
  #   set(BSDI TRUE)
  
