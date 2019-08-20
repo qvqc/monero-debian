@@ -1,3 +1,22 @@
+monero (0.14.1.2-1) unstable; urgency=medium
+
+  [ upstream ]
+  * New release(s).
+    + Fix compiling with GCC 9.1.
+      Closes: Bug#925780. Thanks to Matthias Klose.
+
+  [ Jonas Smedegaard ]
+  * Unfuzz patches.
+  * Improve compiler flags for 32bit archs.
+    Closes: Bug#910517. Thanks to Emilio Pozuelo Monfort and Adrian Bunk.
+  * Improve testsuite:
+    + Tell cmake to use python3 for tests.
+      Build-depend on python3.
+    + Enable test block_weight.
+    + Skip test hash-slow-4 segfaulting.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 20 Aug 2019 09:25:04 +0200
+
 monero (0.14.0.2-1) unstable; urgency=medium
 
   * Fix apply debhelper options also when overriding.
