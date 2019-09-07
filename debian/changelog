@@ -1,3 +1,11 @@
+monero (0.14.1.2-2) unstable; urgency=medium
+
+  * Add patch cherry-picked upstream
+    to fix check for disconnecting peers when syncing.
+  * Declare compliance with Debian Policy 4.4.0.
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 07 Sep 2019 10:45:07 +0200
+
 monero (0.14.1.2-1) unstable; urgency=medium
 
   [ upstream ]

@@ -127,6 +127,7 @@ Files: ANONYMITY_NETWORKS.md
  debian/monero.install
  debian/monero.lintian-overrides
  debian/not-installed
+ debian/patches/020190816~ca8d4a3.patch
  debian/patches/series
  debian/rules
  debian/source/format
