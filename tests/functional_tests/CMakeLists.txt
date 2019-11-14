@@ -50,6 +50,20 @@ target_link_libraries(functional_tests
     ${CMAKE_THREAD_LIBS_INIT}
     ${EXTRA_LIBRARIES})
 
+set(make_test_signature_sources
+  make_test_signature.cc)
+
+add_executable(make_test_signature
+  ${make_test_signature_sources})
+
+target_link_libraries(make_test_signature
+  PRIVATE
+    rpc_base
+    cncrypto
+    epee
+    ${CMAKE_THREAD_LIBS_INIT}
+    ${EXTRA_LIBRARIES})
+
 execute_process(COMMAND ${PYTHON_EXECUTABLE} "-c" "import requests; print('OK')" OUTPUT_VARIABLE REQUESTS_OUTPUT OUTPUT_STRIP_TRAILING_WHITESPACE)
 if (REQUESTS_OUTPUT STREQUAL "OK")
   add_test(
@@ -59,3 +73,7 @@ else()
   message(WARNING "functional_tests_rpc skipped, needs the 'requests' python module")
   set(CTEST_CUSTOM_TESTS_IGNORE ${CTEST_CUSTOM_TESTS_IGNORE} functional_tests_rpc)
 endif()
+
+add_test(
+  NAME    check_missing_rpc_methods
+  COMMAND ${PYTHON_EXECUTABLE} "${CMAKE_CURRENT_SOURCE_DIR}/check_missing_rpc_methods.py" "${CMAKE_SOURCE_DIR}")
