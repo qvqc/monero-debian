@@ -43,7 +43,6 @@
 #include "CryptonightR_JIT.h"
 
 #include <errno.h>
-#include <string.h>
 
 #define MEMORY         (1 << 21) // 2MB scratchpad
 #define ITER           (1 << 20)
@@ -137,8 +136,8 @@ static inline int use_v4_jit(void)
   { \
     U64(b)[2] = state.hs.w[8] ^ state.hs.w[10]; \
     U64(b)[3] = state.hs.w[9] ^ state.hs.w[11]; \
-    division_result = state.hs.w[12]; \
-    sqrt_result = state.hs.w[13]; \
+    division_result = SWAP64LE(state.hs.w[12]); \
+    sqrt_result = SWAP64LE(state.hs.w[13]); \
   } while (0)
 
 #define VARIANT2_PORTABLE_INIT() \
@@ -211,7 +210,7 @@ static inline int use_v4_jit(void)
     uint64_t b0[2]; \
     memcpy_swap64le(b0, b, 2); \
     chunk2[0] = SWAP64LE(chunk1_old[0] + b0[0]); \
-    chunk2[1] = SWAP64LE(SWAP64LE(chunk1_old[1]) + b0[1]); \
+    chunk2[1] = SWAP64LE(chunk1_old[1] + b0[1]); \
     if (variant >= 4) \
     { \
       uint64_t out_copy[2]; \
@@ -743,7 +742,7 @@ BOOL SetLockPagesPrivilege(HANDLE hProcess, BOOL bEnable)
  * the allocated buffer.
  */
 
-void slow_hash_allocate_state(void)
+void cn_slow_hash_allocate_state(void)
 {
     if(hp_state != NULL)
         return;
@@ -805,7 +804,7 @@ void slow_hash_allocate_state(void)
  *@brief frees the state allocated by slow_hash_allocate_state
  */
 
-void slow_hash_free_state(void)
+void cn_slow_hash_free_state(void)
 {
     if(hp_state == NULL)
         return;
@@ -893,11 +892,10 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
 
     // this isn't supposed to happen, but guard against it for now.
     if(hp_state == NULL)
-        slow_hash_allocate_state();
+        cn_slow_hash_allocate_state();
 
     // locals to avoid constant TLS dereferencing
     uint8_t *local_hp_state = hp_state;
-    v4_random_math_JIT_func local_hp_jitfunc = hp_jitfunc;
 
     /* CryptoNight Step 1:  Use Keccak1600 to initialize the 'state' (and 'text') buffers from the data. */
     if (prehashed) {
@@ -1011,13 +1009,13 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
 }
 
 #elif !defined NO_AES && (defined(__arm__) || defined(__aarch64__))
-void slow_hash_allocate_state(void)
+void cn_slow_hash_allocate_state(void)
 {
   // Do nothing, this is just to maintain compatibility with the upgraded slow-hash.c
   return;
 }
 
-void slow_hash_free_state(void)
+void cn_slow_hash_free_state(void)
 {
   // As above
   return;
@@ -1584,13 +1582,13 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
 
 #define hp_jitfunc ((v4_random_math_JIT_func)NULL)
 
-void slow_hash_allocate_state(void)
+void cn_slow_hash_allocate_state(void)
 {
   // Do nothing, this is just to maintain compatibility with the upgraded slow-hash.c
   return;
 }
 
-void slow_hash_free_state(void)
+void cn_slow_hash_free_state(void)
 {
   // As above
   return;
@@ -1767,3 +1765,15 @@ void cn_slow_hash(const void *data, size_t length, char *hash, int variant, int 
 }
 
 #endif
+
+void slow_hash_allocate_state(void)
+{
+  cn_slow_hash_allocate_state();
+  rx_slow_hash_allocate_state();
+}
+
+void slow_hash_free_state(void)
+{
+  cn_slow_hash_free_state();
+  rx_slow_hash_free_state();
+}
