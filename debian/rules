@@ -2,6 +2,12 @@
 
 include /usr/share/dpkg/pkg-info.mk
 
+# generate documentation unless nodoc requested
+DOCS_stem = README ANONYMITY_NETWORKS LEVIN_PROTOCOL
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+DOCS = $(foreach d,$(DOCS_stem),$d.html $d.txt)
+endif
+
 # reduce debugging information on 32bit archs
 # to avoid some FTBFS (memory axhaustion of build environment?)
 ifeq ($(DEB_HOST_ARCH_BITS),32)
@@ -49,6 +55,18 @@ override_dh_missing:
 override_dh_auto_clean:
 	rm -rf "$(FAKEHOME)"
 	dh_auto_clean
+
+override_dh_installdocs:
+	dh_installdocs --all -- $(DOCS)
+
+override_dh_clean:
+	dh_clean -- $(DOCS)
+
+%.html: %.md
+	pandoc --from gfm-raw_html --to html --standalone --output $@ $<
+
+%.txt: %.md
+	pandoc --from gfm-raw_html --to plain --output $@ $<
 
 %:
 	dh $@ --parallel $(DH_OPTIONS:-O%=%)
