@@ -66,4 +66,4 @@ override_dh_clean:
 	pandoc --from gfm-raw_html --to plain --output $@ $<
 
 %:
-	dh $@ --parallel $(DH_OPTIONS:-O%=%)
+	dh $@ $(DH_OPTIONS:-O%=%)
