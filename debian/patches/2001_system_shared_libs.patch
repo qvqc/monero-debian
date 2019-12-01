@@ -46,7 +46,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  #define MONERO_DEFAULT_LOG_CATEGORY "net.p2p"
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -285,6 +285,8 @@
+@@ -298,6 +298,8 @@
  # elseif(CMAKE_SYSTEM_NAME MATCHES ".*BSDI.*")
  #   set(BSDI TRUE)
  
