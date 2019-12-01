@@ -133,8 +133,7 @@ Files: contrib/epee/include/sha1.h
 Copyright: 2011, Micael Hildenborg
 License: BSD-3-clause~Hildenborg
 
-Files: cmake/FindBerkeleyDB.cmake
- cmake/FindLibunwind.cmake
+Files: cmake/FindLibunwind.cmake
 Copyright: 2006, Alexander Dymo <adymo@kdevelop.org>
 License-Grant:
  Redistribution and use is allowed
