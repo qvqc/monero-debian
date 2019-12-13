@@ -29,6 +29,23 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  
  find_package(Unbound)
  
+@@ -80,4 +70,15 @@
+ 
+ add_subdirectory(db_drivers)
+ add_subdirectory(easylogging++)
+-add_subdirectory(randomx EXCLUDE_FROM_ALL)
++
++find_path(RANDOMX_INCLUDE_DIR randomx.h
++  /usr/include
++  /usr/local/include
++)
++
++find_library(RANDOMX_LIBRARIES NAMES randomx )
++
++include(FindPackageHandleStandardArgs)
++find_package_handle_standard_args(RandomX "Could not find randomx" RANDOMX_INCLUDE_DIR RANDOMX_LIBRARIES)
++# show the RANDOMX_INCLUDE_DIR and RANDOMX_LIBRARIES variables only in the advanced view
++mark_as_advanced(RANDOMX_INCLUDE_DIR RANDOMX_LIBRARIES )
 --- a/src/p2p/net_node.inl
 +++ b/src/p2p/net_node.inl
 @@ -60,9 +60,9 @@

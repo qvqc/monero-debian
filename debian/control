@@ -21,6 +21,7 @@ Build-Depends:
  libgtest-dev,
  libminiupnpc-dev,
  libhidapi-dev [!kfreebsd-any !hurd-any],
+ librandomx-dev,
  libreadline-dev,
  libsodium-dev,
  libssl-dev,
