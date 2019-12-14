@@ -1,3 +1,13 @@
+monero (0.15.0.1-2) unstable; urgency=medium
+
+  * fix pass cmake the full path to Python3 executable,
+    and more reliably exclude failing tests;
+    fix build-depend on python3-requests
+  * add patch 2002 to avoid privacy breach in documentation
+  * use variable $AUTOPKGTEST_TMP (not $ADTTMP)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 15 Dec 2019 00:26:22 +0100
+
 monero (0.15.0.1-1) experimental; urgency=medium
 
   [ upstream ]
