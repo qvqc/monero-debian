@@ -1,15 +1,20 @@
-monero (0.15.0.0-1) UNRELEASED; urgency=medium
+monero (0.15.0.1-1) experimental; urgency=medium
 
   [ upstream ]
-  * new release
+  * new release(s)
 
   * declare compliance with Debian Policy 4.4.1
-  * include documentation as html and plaintext; build-depend on pandoc
+  * include documentation as html and plaintext;
+    build-depend on pandoc
   * copyright: drop file no longer shipped upstream
   * drop patch cherry-picked upstream since applied
   * unfuzz patches
+  * bump debhelper compatibility level to 10;
+    stop explicitly enable parallel build
+  * extend patch 2001 to cover linking with system shared librandomx;
+    build-depend on librandomx-dev
 
- -- Jonas Smedegaard <dr@jones.dk>  Sun, 01 Dec 2019 13:27:10 +0100
+ -- Jonas Smedegaard <dr@jones.dk>  Sat, 14 Dec 2019 11:21:54 +0100
 
 monero (0.14.1.2-2) unstable; urgency=medium
 

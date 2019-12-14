@@ -32,6 +32,7 @@ Files: ANONYMITY_NETWORKS.md
  contrib/depends/hosts/android.mk
  contrib/depends/hosts/darwin.mk
  contrib/depends/hosts/default.mk
+ contrib/depends/hosts/freebsd.mk
  contrib/depends/hosts/linux.mk
  contrib/depends/hosts/mingw32.mk
  contrib/depends/packages.md
@@ -40,6 +41,7 @@ Files: ANONYMITY_NETWORKS.md
  contrib/depends/packages/cppzmq.mk
  contrib/depends/packages/eudev.mk
  contrib/depends/packages/expat.mk
+ contrib/depends/packages/freebsd_base.mk
  contrib/depends/packages/graphviz.mk
  contrib/depends/packages/gtest.mk
  contrib/depends/packages/hidapi.mk
@@ -64,23 +66,26 @@ Files: ANONYMITY_NETWORKS.md
  contrib/depends/packages/protobuf.mk
  contrib/depends/packages/qt.mk
  contrib/depends/packages/readline.mk
- contrib/depends/packages/sodium-darwin.mk
  contrib/depends/packages/sodium.mk
  contrib/depends/packages/unbound.mk
  contrib/depends/packages/unwind.mk
  contrib/depends/packages/xproto.mk
  contrib/depends/packages/zeromq.mk
+ contrib/depends/patches/boost/fix_aroptions.patch
  contrib/depends/patches/cmake/cmake-1-fixes.patch
  contrib/depends/patches/icu4c/icu-001-dont-build-static-dynamic-twice.patch
  contrib/depends/patches/libiconv/fix-whitespace.patch
  contrib/depends/patches/native_biplist/sorted_list.patch
+ contrib/depends/patches/native_cctools/skip_otool.patch
  contrib/depends/patches/native_cdrkit/cdrkit-deterministic.patch
  contrib/depends/patches/native_mac_alias/python3.patch
  contrib/depends/patches/ncurses/fallback.c
+ contrib/depends/patches/openssl/fix_arflags.patch
  contrib/depends/patches/qt/fix_qt_pkgconfig.patch
  contrib/depends/patches/qt/pidlist_absolute.patch
  contrib/depends/patches/qt/qfixed-coretext.patch
  contrib/depends/patches/sodium/fix-whitespace.patch
+ contrib/depends/patches/unwind/fix_obj_order.patch
  contrib/depends/patches/zeromq/9114d3957725acd34aa8b8d011585812f3369411.patch
  contrib/depends/patches/zeromq/9e6745c12e0b100cd38acecc16ce7db02905e27c.patch
  contrib/depends/patches/zeromq/ffe62d3398d5e0191f554f61049aa7ec9fc892ae.patch
@@ -114,6 +119,7 @@ Files: ANONYMITY_NETWORKS.md
  contrib/gitian/README.md
  contrib/gitian/gitian-android.yml
  contrib/gitian/gitian-build.py
+ contrib/gitian/gitian-freebsd.yml
  contrib/gitian/gitian-linux.yml
  contrib/gitian/gitian-osx.yml
  contrib/gitian/gitian-win.yml
