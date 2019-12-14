@@ -30,15 +30,16 @@ FAKEHOME = $(CURDIR)/debian/fakehome
 
 # skip tests requiring network
 GTEST_FILTER = address_from_url.*:dns_resolver.*
+TEST_EXCLUDE = functional_tests_rpc
 
 # skip slow tests
-TEST_EXCLUDE = core_tests
+TEST_EXCLUDE += core_tests
 
 # skip tests possibly broken
 TEST_EXCLUDE += $(if $(DEB_SUITE_EXP),,cnv4-jit hash-slow-4)
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DARCH=default -DNO_AES=ON -DBUILD_TESTS=ON -DPYTHON_EXECUTABLE=python3
+	dh_auto_configure -- -DARCH=default -DNO_AES=ON -DBUILD_TESTS=ON -DPYTHON_EXECUTABLE=/usr/bin/python3
 
 override_dh_auto_build: $(DOCS)
 	dh_auto_build

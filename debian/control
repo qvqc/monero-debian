@@ -30,6 +30,7 @@ Build-Depends:
  pandoc <!nodoc>,
  pkg-config,
  python3 <!nocheck>,
+ python3-requests <!nocheck>,
  qtchooser,
  rapidjson-dev,
 Standards-Version: 4.4.1
