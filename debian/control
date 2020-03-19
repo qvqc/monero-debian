@@ -5,7 +5,7 @@ Maintainer: Debian Cryptocoin Team <team+cryptocoin@tracker.debian.org>
 Uploaders: Jonas Smedegaard <dr@jones.dk>
 Build-Depends:
  cmake,
- debhelper,
+ debhelper-compat (= 12),
  doxygen,
  graphviz,
  libboost-chrono-dev,
