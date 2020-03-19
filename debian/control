@@ -33,7 +33,7 @@ Build-Depends:
  python3-requests <!nocheck>,
  qtchooser,
  rapidjson-dev,
-Standards-Version: 4.4.1
+Standards-Version: 4.5.0
 Homepage: https://getmonero.org/
 Vcs-Git: https://salsa.debian.org/cryptocoin-team/monero.git
 Vcs-Browser: https://salsa.debian.org/cryptocoin-team/monero
