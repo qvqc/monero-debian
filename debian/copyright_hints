@@ -132,7 +132,6 @@ Files: ANONYMITY_NETWORKS.md
  contrib/snap/snapcraft.yaml
  contrib/valgrind/monero.supp
  debian/TODO
- debian/compat
  debian/control
  debian/gbp.conf
  debian/monero-tests.install
@@ -140,6 +139,10 @@ Files: ANONYMITY_NETWORKS.md
  debian/monero.install
  debian/monero.lintian-overrides
  debian/not-installed
+ debian/patches/020200218~dbfa4f8.patch
+ debian/patches/1001_avoid_non-UTF8_chars.patch
+ debian/patches/2001_system_shared_libs.patch
+ debian/patches/2002_privacy.patch
  debian/patches/series
  debian/rules
  debian/source/format
@@ -334,8 +337,6 @@ Files: ANONYMITY_NETWORKS.md
  src/crypto/jh.h
  src/crypto/keccak.c
  src/crypto/keccak.h
- src/crypto/skein.c
- src/crypto/skein.h
  src/crypto/variant2_int_sqrt.h
  src/crypto/variant4_random_math.h
  src/device_trezor/trezor/tools/README.md
@@ -821,6 +822,7 @@ Files: Makefile
  tests/unit_tests/uri.cpp
  tests/unit_tests/vercmp.cpp
  tests/unit_tests/wipeable_string.cpp
+ tests/unit_tests/zmq_rpc.cpp
  translations/CMakeLists.txt
  utils/build_scripts/windows.bat
  utils/python-rpc/framework/daemon.py
@@ -835,6 +837,7 @@ Copyright: 2014-2018, The Monero Project
   2018, The Monero Project
   2018-2019, The Monero Project
   2019, The Monero Project
+  2020, The Monero Project
 License: BSD-3-clause
  FIXME
 
@@ -1311,13 +1314,6 @@ Copyright: 2012, Nabil S. Al Ramli, www.nalramli.com
 License: BSD-2-clause
  FIXME
 
-Files: debian/patches/1001_avoid_non-UTF8_chars.patch
- debian/patches/2001_system_shared_libs.patch
- src/common/expect.cpp
-Copyright: NONE
-License: BSD-3-clause
- FIXME
-
 Files: src/mnemonics/chinese_simplified.h
  src/mnemonics/japanese.h
  src/mnemonics/portuguese.h
@@ -1360,10 +1356,17 @@ Copyright: 2002, -7 Robert Ramey - http:www.rrsd.com .
 License: BSL-1.0
  FIXME
 
+Files: external/easylogging++/easylogging++.cc
+ external/easylogging++/easylogging++.h
+Copyright: 2012-2018, @abumusamq
+  2012-2018, Zuhd Web Services
+License: Expat
+ FIXME
+
 Files: contrib/depends/config.guess
  contrib/depends/config.sub
 Copyright: 1992-2017, Free Software Foundation, Inc.
-License: GPL-3
+License: GPL-3+
  FIXME
 
 Files: external/db_drivers/liblmdb/midl.c
@@ -1372,6 +1375,12 @@ Copyright: 2000-2019, The OpenLDAP Foundation.
   2001-2018, Howard Chu, Symas Corp.
   2001-2019, Howard Chu, Symas Corp.
 License: UNKNOWN
+ FIXME
+
+Files: src/crypto/skein.c
+ src/crypto/skein.h
+Copyright: NONE
+License: public-domain
  FIXME
 
 Files: contrib/epee/include/net/http_protocol_handler.inl
@@ -1398,15 +1407,14 @@ Copyright: 2014, Thomas Voegtlin
 License: BSD-3-clause
  FIXME
 
-Files: contrib/epee/include/rolling_median.h
-Copyright: 2011, ashelly.myopenid.com, licenced under the MIT licence
-  2019, The Monero Project
-License: BSD-3-clause
- FIXME
-
 Files: contrib/epee/include/net/connection_basic.hpp
 Copyright: 2014-2019, The Monero Project
   able ;)
+License: BSD-3-clause
+ FIXME
+
+Files: src/common/expect.cpp
+Copyright: NONE
 License: BSD-3-clause
  FIXME
 
@@ -1414,6 +1422,12 @@ Files: LICENSE
 Copyright: 2012-2013, The Cryptonote
   2014, The Boolberry
   2014-2019, The Monero Project
+License: BSD-3-clause and/or Expat
+ FIXME
+
+Files: contrib/epee/include/rolling_median.h
+Copyright: 2011, ashelly.myopenid.com, licenced under the MIT licence
+  2019, The Monero Project
 License: BSD-3-clause and/or Expat
  FIXME
 
@@ -1471,10 +1485,10 @@ Copyright: Iowa State University 2009-2010.
 License: BSL-1.0
  FIXME
 
-Files: external/easylogging++/easylogging++.h
-Copyright: 2012-2018, @abumusamq
-  2012-2018, Zuhd Web Services
-License: CC0
+Files: translations/generate_translations_header.c
+Copyright: 2013, Sergey Lyubka
+  2017-2019, The Monero Project
+License: Expat
  FIXME
 
 Files: debian/copyright-check
@@ -1509,12 +1523,6 @@ Copyright: 2009-2010, Martin Hedenfalk <martin@bzero.se>
 License: ISC and/or public-domain
  FIXME
 
-Files: external/easylogging++/easylogging++.cc
-Copyright: 2012-2018, @abumusamq
-  2012-2018, Zuhd Web Services
-License: UNKNOWN
- FIXME
-
 Files: cmake/FindLibunwind.cmake
 Copyright: 2006, Alexander Dymo, <adymo@kdevelop.org>
 License: UNKNOWN
@@ -1528,12 +1536,6 @@ License: UNKNOWN
 Files: external/db_drivers/liblmdb/COPYRIGHT
 Copyright: 2011-2019, Howard Chu, Symas Corp.
   other parties and/or subject to additional restrictions.
-License: UNKNOWN
- FIXME
-
-Files: translations/generate_translations_header.c
-Copyright: 2013, Sergey Lyubka
-  2017-2019, The Monero Project
 License: UNKNOWN
  FIXME
 

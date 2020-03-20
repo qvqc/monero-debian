@@ -1,3 +1,20 @@
+monero (0.15.0.5-1) unstable; urgency=medium
+
+  [ upstream ]
+  * new release
+
+  [ Jonas Smedegaard ]
+  * declare compliance with Debian Policy 4.5.0
+  * watch: set dversionmangle=auto
+  * use debhelper compatibility level 12 (not 10);
+    build-depend on debhelper-compat (not debhelper)
+  * add patch cherry-picked (proposed) upstream
+    to fix missing test name in unit test
+  * have dh_dwz skip file failing with "Unknown DWARF DW_OP_255";
+    see bug#949296
+
+ -- Jonas Smedegaard <dr@jones.dk>  Fri, 20 Mar 2020 12:06:10 +0100
+
 monero (0.15.0.1-2) unstable; urgency=medium
 
   * fix pass cmake the full path to Python3 executable,
