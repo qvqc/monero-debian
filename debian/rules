@@ -60,6 +60,10 @@ override_dh_auto_clean:
 override_dh_installdocs:
 	dh_installdocs --all -- $(DOCS)
 
+# skip file failing with "Unknown DWARF DW_OP_255" (see bug#949296)
+override_dh_dwz:
+	dh_dwz --exclude=usr/lib/monero/tests/bin/performance_tests
+
 override_dh_clean:
 	dh_clean -- $(DOCS)
 
