@@ -1,3 +1,10 @@
+monero (0.15.0.5-2) unstable; urgency=medium
+
+  * fix link with libatomic on armel/mipsel/powerpc;
+    see bug#961100, thanks to Adrian Bunk
+
+ -- Jonas Smedegaard <dr@jones.dk>  Wed, 20 May 2020 16:06:30 +0200
+
 monero (0.15.0.5-1) unstable; urgency=medium
 
   [ upstream ]
