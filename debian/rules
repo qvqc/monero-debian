@@ -17,7 +17,7 @@ endif
 # explicitly link with libatomic
 # to work around gcc bug <https://gcc.gnu.org/bugzilla/show_bug.cgi?id=81358>
 ifneq (,$(filter $(DEB_HOST_ARCH), armel m68k mips mipsel powerpc powerpcspe sh4))
-export DEB_LDFLAGS_MAINT_APPEND = -latomic
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,--no-as-needed -latomic -Wl,--as-needed
 endif
 
 DH_OPTIONS = -O--buildsystem=cmake
