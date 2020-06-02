@@ -38,7 +38,6 @@ Files: ANONYMITY_NETWORKS.md
  contrib/depends/packages.md
  contrib/depends/packages/android_ndk.mk
  contrib/depends/packages/boost.mk
- contrib/depends/packages/cppzmq.mk
  contrib/depends/packages/eudev.mk
  contrib/depends/packages/expat.mk
  contrib/depends/packages/freebsd_base.mk
@@ -84,6 +83,7 @@ Files: ANONYMITY_NETWORKS.md
  contrib/depends/patches/qt/fix_qt_pkgconfig.patch
  contrib/depends/patches/qt/pidlist_absolute.patch
  contrib/depends/patches/qt/qfixed-coretext.patch
+ contrib/depends/patches/sodium/disable-glibc-getrandom-getentropy.patch
  contrib/depends/patches/sodium/fix-whitespace.patch
  contrib/depends/patches/unwind/fix_obj_order.patch
  contrib/depends/patches/zeromq/9114d3957725acd34aa8b8d011585812f3369411.patch
@@ -109,6 +109,7 @@ Files: ANONYMITY_NETWORKS.md
  contrib/epee/include/stats.h
  contrib/epee/include/stats.inl
  contrib/epee/include/warnings.h
+ contrib/epee/src/abstract_http_client.cpp
  contrib/epee/src/net_helper.cpp
  contrib/epee/src/net_utils_base.cpp
  contrib/epee/src/readline_buffer.cpp
@@ -419,6 +420,7 @@ Files: ANONYMITY_NETWORKS.md
  translations/monero_pt-pt.ts
  translations/monero_ro.ts
  translations/monero_ru.ts
+ translations/monero_sk.ts
  translations/monero_sl.ts
  translations/monero_sr.ts
  translations/monero_sv.ts
@@ -435,6 +437,7 @@ Files: ANONYMITY_NETWORKS.md
  utils/conf/monerod.conf
  utils/doxygen-publish.sh
  utils/gpg_keys/anonimal.asc
+ utils/gpg_keys/binaryfate.asc
  utils/gpg_keys/erciccione.asc
  utils/gpg_keys/fluffypony.asc
  utils/gpg_keys/guzzi.asc
@@ -449,10 +452,15 @@ Files: ANONYMITY_NETWORKS.md
  utils/gpg_keys/nanoakron.asc
  utils/gpg_keys/oranjuice.asc
  utils/gpg_keys/sarang.asc
+ utils/gpg_keys/selsta.asc
+ utils/gpg_keys/snipa.asc
  utils/gpg_keys/stoffu.asc
  utils/gpg_keys/tewinget.asc
+ utils/gpg_keys/thecharlatan.asc
  utils/gpg_keys/tomerkon.asc
  utils/gpg_keys/warptangent.asc
+ utils/gpg_keys/xiphon.asc
+ utils/logs/levin-traffic.awk
  utils/python-rpc/console
  utils/python-rpc/console.py
  utils/systemd/monerod.service
@@ -465,6 +473,7 @@ License: UNKNOWN
 Files: Makefile
  cmake/32-bit-toolchain.cmake
  cmake/64-bit-toolchain.cmake
+ cmake/FindCcache.cmake
  cmake/FindUnbound.cmake
  cmake/Version.cmake
  cmake/test-libusb-version.c
@@ -474,6 +483,7 @@ Files: Makefile
  contrib/CMakeLists.txt
  contrib/epee/CMakeLists.txt
  contrib/epee/include/byte_slice.h
+ contrib/epee/include/byte_stream.h
  contrib/epee/include/fnv1.h
  contrib/epee/include/hex.h
  contrib/epee/include/mlocker.h
@@ -489,6 +499,7 @@ Files: Makefile
  contrib/epee/src/CMakeLists.txt
  contrib/epee/src/buffer.cpp
  contrib/epee/src/byte_slice.cpp
+ contrib/epee/src/byte_stream.cpp
  contrib/epee/src/connection_basic.cpp
  contrib/epee/src/hex.cpp
  contrib/epee/src/http_auth.cpp
@@ -556,9 +567,11 @@ Files: Makefile
  src/common/threadpool.h
  src/common/updates.cpp
  src/common/updates.h
+ src/common/utf8.h
  src/crypto/CMakeLists.txt
  src/crypto/blake256.c
  src/crypto/c_threads.h
+ src/crypto/duration.h
  src/crypto/groestl.h
  src/crypto/groestl_tables.h
  src/crypto/hmac-keccak.c
@@ -570,10 +583,13 @@ Files: Makefile
  src/cryptonote_basic/hardfork.h
  src/cryptonote_basic/subaddress_index.h
  src/cryptonote_core/CMakeLists.txt
+ src/cryptonote_core/i_core_events.h
  src/cryptonote_core/tx_sanity_check.cpp
  src/cryptonote_core/tx_sanity_check.h
  src/cryptonote_protocol/CMakeLists.txt
  src/cryptonote_protocol/cryptonote_protocol_handler-base.cpp
+ src/cryptonote_protocol/enums.h
+ src/cryptonote_protocol/fwd.h
  src/cryptonote_protocol/levin_notify.cpp
  src/cryptonote_protocol/levin_notify.h
  src/daemon/CMakeLists.txt
@@ -686,6 +702,8 @@ Files: Makefile
  src/ringct/multiexp.cc
  src/ringct/multiexp.h
  src/rpc/CMakeLists.txt
+ src/rpc/bootstrap_node_selector.cpp
+ src/rpc/bootstrap_node_selector.h
  src/rpc/daemon_handler.cpp
  src/rpc/daemon_handler.h
  src/rpc/daemon_messages.cpp
@@ -702,6 +720,8 @@ Files: Makefile
  src/rpc/rpc_payment_costs.h
  src/rpc/rpc_payment_signature.cpp
  src/rpc/rpc_payment_signature.h
+ src/rpc/rpc_version_str.cpp
+ src/rpc/rpc_version_str.h
  src/rpc/zmq_server.cpp
  src/rpc/zmq_server.h
  src/serialization/CMakeLists.txt
@@ -731,6 +751,8 @@ Files: Makefile
  tests/block_weight/block_weight.cpp
  tests/core_proxy/CMakeLists.txt
  tests/core_tests/CMakeLists.txt
+ tests/core_tests/tx_pool.cpp
+ tests/core_tests/tx_pool.h
  tests/crypto/CMakeLists.txt
  tests/crypto/cnv4-jit.c
  tests/daemon_tests/CMakeLists.txt
@@ -789,6 +811,7 @@ Files: Makefile
  tests/unit_tests/apply_permutation.cpp
  tests/unit_tests/block_queue.cpp
  tests/unit_tests/blockchain_db.cpp
+ tests/unit_tests/bootstrap_node_selector.cpp
  tests/unit_tests/command_line.cpp
  tests/unit_tests/crypto.cpp
  tests/unit_tests/device.cpp
@@ -816,6 +839,7 @@ Files: Makefile
  tests/unit_tests/random.cpp
  tests/unit_tests/ringdb.cpp
  tests/unit_tests/rolling_median.cpp
+ tests/unit_tests/rpc_version_str.cpp
  tests/unit_tests/sha256.cpp
  tests/unit_tests/test_notifier.cpp
  tests/unit_tests/threadpool.cpp
@@ -830,13 +854,17 @@ Files: Makefile
  utils/python-rpc/framework/wallet.py
 Copyright: 2014-2018, The Monero Project
   2014-2019, The Monero Project
+  2014-2020, The Monero Project
   2016-2019, The Monero Project
+  2016-2020, The Monero Project
   2017, The Monero Project
   2017-2018, The Monero Project
   2017-2019, The Monero Project
+  2017-2020, The Monero Project
   2018, The Monero Project
   2018-2019, The Monero Project
   2019, The Monero Project
+  2019-2020, The Monero Project
   2020, The Monero Project
 License: BSD-3-clause
  FIXME
@@ -849,6 +877,7 @@ Files: CMakeLists.txt
  include/INode.h
  include/IWallet.h
  src/CMakeLists.txt
+ src/blockchain_db/locked_txn.h
  src/blockchain_db/testdb.h
  src/checkpoints/checkpoints.cpp
  src/checkpoints/checkpoints.h
@@ -903,7 +932,6 @@ Files: CMakeLists.txt
  src/cryptonote_basic/cryptonote_boost_serialization.h
  src/cryptonote_basic/cryptonote_format_utils.cpp
  src/cryptonote_basic/cryptonote_format_utils.h
- src/cryptonote_basic/cryptonote_stat_info.h
  src/cryptonote_basic/difficulty.cpp
  src/cryptonote_basic/difficulty.h
  src/cryptonote_basic/miner.cpp
@@ -1144,6 +1172,7 @@ Files: contrib/epee/LICENSE.txt
  contrib/epee/include/misc_language.h
  contrib/epee/include/misc_log_ex.h
  contrib/epee/include/misc_os_dependent.h
+ contrib/epee/include/net/abstract_http_client.h
  contrib/epee/include/net/abstract_tcp_server.h
  contrib/epee/include/net/abstract_tcp_server_cp.h
  contrib/epee/include/net/abstract_tcp_server_cp.inl
@@ -1559,13 +1588,6 @@ License: UNKNOWN
 Files: debian/source/lintian-overrides
 Copyright: GPL-3+
   gpl-3+
-License: UNKNOWN
- FIXME
-
-Files: translations/monero_sk.ts
-Copyright: ID platby nemÃ´Å¾u byÅ¥ pouÅ¾itÃ© naraz</translation>
-  ID platby. KrÃ¡tke ID platby by malo byÅ¥ pouÅ¾itÃ© v integrovanej adrese</translation>
-  ID platby</translation>
 License: UNKNOWN
  FIXME
 

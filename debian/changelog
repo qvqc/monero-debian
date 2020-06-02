@@ -1,3 +1,15 @@
+monero (0.16.0.0-1) unstable; urgency=medium
+
+  [ upstream ]
+  * new release
+
+  [ Jonas Smedegaard ]
+  * copyright: update coverage
+  * drop patch cherry-picked from upstream merge-request since adopted
+  * unfuzz and update patches
+
+ -- Jonas Smedegaard <dr@jones.dk>  Tue, 02 Jun 2020 15:14:43 +0200
+
 monero (0.15.0.5-2) unstable; urgency=medium
 
   * fix link with libatomic on armel/mipsel/powerpc;
